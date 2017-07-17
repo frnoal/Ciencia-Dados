@@ -1,0 +1,984 @@
+\textsf{Coursera} - Ferramentas do Cientista de Dados
+Aluno: Filipe Ronald Noal\\\texttt{filipe.ronald@gmail.com}
+
+
+% \def\wp         {\textsf{WhatsApp}}%
+% \def\fb         {\textsf{Facebook}}%
+% \def\email      {\textit{e-mail}}%
+% \def\mililitro  {\,{\rm m}\ell}%
+% \def\litro      {\,\ell}%
+% \def\metro      {\,{\rm m}}%
+% \def\centimetro {\,{\rm cm}}%
+% \def\miligrama  {\,{\rm mg}}%
+% \def\grama      {\,{\rm g}}%
+% \def\kilograma  {\,{\rm kg}}%
+\def\r          {`\textsf{R}'}%
+% \newcommand{\hora}[2]{{#1}h\,{#2}min}%
+% \newcommand{\dinheiro}[2]{R\$*\,{#1}{,}{#2}}%
+% \newcommand{\remed}[3]{{#1} {$#2$} {(\textsl{#3})}}%
+% \newenvironment{nitemize}{\begin{itemize}}{\end{itemize}}%
+% \newenvironment{nenumerate}{\begin{enumerate}}{\end{enumerate}}%
+
+
+%%%%%%%%%%
+\section{Semana 1}
+
+%%%%%%%%%%
+\subsection{Welcome to the Data Scientist's Toolbox}
+
+Welcome to Week 1 of the Data Scientist's Toolbox! This course is an introduction to the tools and ideas that you will see throughout the rest of the Data Science Specialization.
+
+We believe that the key word in Data Science is "science". Our course track is focused on providing you with three things: (1) an introduction to the key ideas behind working with data in a scientific way that will produce new and reproducible insight, (2) an introduction to the tools that will allow you to execute on a data analytic strategy, from raw data in a database to a completed report with interactive graphics, and (3) on giving you plenty of hands on practice so you can learn the techniques for yourself.
+
+This course focuses primarily on getting you set up with the appropriate tools and accounts you will need for the rest of the specialization and on giving you a solid grounding in the key conceptual ideas. If you feel like the material is basic, that is ok, you will see much more in depth treatment of each topic in the subsequent courses in the track.
+
+We are excited about the opportunity to attempt to scale Data Science education. We intend for the courses to be self contained, fast paced, and interactive.
+
+One important note is that as part of this class you will be required to set up a Github account. Github is a tool for collaborative code sharing and editing. During this course and other courses in the track you will be submitting links to files you publicly place in your Github account as part of your Course Projects. If you are concerned about preserving your anonymity you should set up an anonymous Github account and be careful not to include any information you do not want made available to peer evaluators.
+
+Please see the course syllabus for information about the quizzes, the Course Project, and grading. Don't forget to say hi on the forums. The community developed around these courses is one of the best places to learn and the best things about taking a MOOC!
+
+
+%%%%%%%%%%
+\subsection{Syllabus}
+
+\subsection*{Course Description:}
+
+In this course you will get an introduction to the main tools and ideas in the data scientists toolbox. The course gives an overview of the data, questions, and tools that data analysts and data scientists work with. There are two components to this course. The first is a conceptual introduction to the ideas behind turning data into actionable knowledge. The second is a practical introduction to the tools that will be used in the program like version control, markdown, git, Github, \r{}, and Rstudio.
+
+This course focuses primarily on getting you set up with the appropriate tools and accounts you will need for the rest of the specialization and on giving you a solid grounding in the key conceptual ideas. If you feel like the material is basic, that is ok, you will see much more in depth treatment of each topic in the subsequent courses in the track.
+
+
+\subsection*{Course Content:}
+
+\begin{nitemize}
+\item    Track motivation
+\item    Getting help
+\item    Introduction to basic tools
+\item    \r{}
+\item    Rstudio
+\item    Git
+\item    Github
+\item    Types of data questions
+\item    Steps in a data analysis
+\item    Putting the science in data science
+\end{nitemize}
+
+
+\subsection*{Weekly quizzes}
+
+\begin{nitemize}
+\item    There are three weekly quizzes.
+\item    You must earn a grade of at least 80\% to pass a quiz
+\item    You may attempt each quiz up to 3 times in 8 hours.
+\item    The score from your most successful attempt will count toward your final grade.
+\end{nitemize}
+
+
+\subsection*{The Course Project}
+
+In the Course Project, you will demonstrate that you've set up all of the necessary accounts for the tools we'll be using.
+
+You are required to evaluate and grade at least four of your classmates' projects. For this course, the project can be evaluated with a series of yes/no answers to determine whether people completed the required installations.
+
+Part of the course project includes submitting a screenshot to demonstrate you have installed the relevant software. Be sure not to take a screenshot with other applications open that may reveal personal information or anything else you don't want others to see.
+
+
+\subsection*{Grading policy}
+
+You must score at least 80\% on all assignments (Quizzes \& Project) to pass the course.
+
+Your final grade will be calculated as follows:
+
+\begin{nitemize}
+\item    Quiz 1 = 20\%
+\item    Quiz 2 = 20\%
+\item    Quiz 3 = 20\%
+\item    Course project = 40\%
+\end{nitemize}
+
+
+\subsection*{Differences of opinion}
+
+Keep in mind that currently data analysis is as much art as it is science --- so we may have a difference of opinion --- and that is ok! Please refrain from angry, sarcastic, or abusive comments on the message boards. Our goal is to create a supportive community that helps the learning of all students, from the most advanced to those who are just seeing this material for the first time.
+
+
+\subsection*{Plagiarism}
+
+Johns Hopkins University defines plagiarism as "\ldots taking for one's own use the words, ideas, concepts or data of another without proper attribution. Plagiarism includes both direct use or paraphrasing of the words, thoughts, or concepts of another without proper attribution." We take plagiarism very seriously, as does Johns Hopkins University.
+
+We recognize that many students may not have a clear understanding of what plagiarism is or why it is wrong. Please see the JHU referencing guide for more information on plagiarism.
+
+It is critically important that you give people/sources credit when you use their words or ideas. If you do not give proper credit --- particularly when quoting directly from a source --- you violate the trust of your fellow students.
+
+The Coursera Honor code includes an explicit statement about plagiarism:
+
+I will register for only one account. My answers to homework, quizzes and exams will be my own work (except for assignments that explicitly permit collaboration). I will not make solutions to homework, quizzes or exams available to anyone else. This includes both solutions written by me, as well as any official solutions provided by the course staff. I will not engage in any other activities that will dishonestly improve my results or dishonestly improve/hurt the results of others.
+
+
+\subsection*{Reporting plagiarism on course projects}
+
+One of the criteria in the project rubric focuses on plagiarism. Keep in mind that some components of the projects will be very similar across terms and so answers that appear similar may be honest coincidences. However, we would appreciate if you do a basic check for obvious plagiarism and report it during your peer assessment phase.
+
+It is currently very difficult to prove or disprove a charge of plagiarism in the MOOC peer assessment setting. We are not in a position to evaluate whether or not a submission actually constitutes plagiarism, and we will not be able to entertain appeals or to alter any grades that have been assigned through the peer evaluation system.
+
+But if you take the time to report suspected plagiarism, this will help us to understand the extent of the problem and work with Coursera to address critical issues with the current system.
+
+
+\subsection{Specialization Textbooks}
+
+Along with all of the content provided in the courses of the Data Science Specialization, we also offer a series companion textbooks that complement the lecture materials and provide a set of notes that you can refer to while taking each course (and after the course is completed). The books are all available from Leanpub.
+
+Specialization Textbooks
+\begin{nitemize}
+\item    \href{https://leanpub.com/datastyle}{Elements of Data Analytic Style} by Jeff Leek
+\item    \href{https://leanpub.com/rprogramming?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2}{R Programming for Data Science} by Roger Peng
+\item    \href{https://leanpub.com/exdata?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2}{Exploratory Data Analysis with R} by Roger Peng
+\item    \href{https://leanpub.com/reportwriting?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2}{Report Writing for Data Science in R} by Roger Peng
+\item    \href{https://leanpub.com/LittleInferenceBook}{Statistical Inference for Data Science} by Brian Caffo
+\item    \href{https://leanpub.com/regmods}{Regression Modeling for Data Science in R} by Brian Caffo
+\item    \href{https://leanpub.com/ddp}{Developing Data Products in R} by Brian Caffo
+\end{nitemize}
+
+In addition, to the above books, two additional books that are highly relevant to the Specialization are
+\begin{nitemize}
+\item    \href{https://leanpub.com/artofdatascience?utm_source=DST2&utm_medium=Reading&utm_campaign=DST2}{The Art of Data Science} by Roger Peng
+\item    \href{https://leanpub.com/modernscientist}{How to Be A Modern Scientist} by Jeff Leek
+\end{nitemize}
+
+
+%%%%%%%%%%
+\subsection{Motivação para Especialização}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large \textbf{``}}%
+Bem vindo à especialização em Ciência de Dados da Universidade Johns Hopkins. Estou super animado em falar um pouco sobre este curso para vocês e sobre para onde você se encaminhará nos próximos nove meses. Meu nome é Jeff Leek e sou professor na Escola de Saúde Pública Johns Hopkins Bloomberg. Eu pensei em começar este vídeo introdutório com uma citação de um dos meus presidentes americanos favoritos, Teddy Roosevelt. Ele disse que não é o crítico que faz diferença. Não é quem aponta como uma pessoa que está realmente fazendo as coisas, está errado ou atrapalhado. Quem faz diferença é a pessoa que realmente tenta fazer as coisas, mesmo quando há obstáculos no caminho. E a maior parte da ciência de dados hoje é ser capaz de ultrapassar as muitas dificuldades que você encontra  ao lidar com um volume grande de dados ou dados confusos. O processo envolve coletar os dados, limpá-los e então desenvolver novas técnicas de análise que exploram as novas informações sobre esses dados. Então, todos esses passos são um pouco complicados  e às vezes criam abertura para críticas  quando você está tentando fazer algo novo e interessante. Eu queria começar com uma citação que diz que é importante se empenhar. Os corajosos fazem coisas desse tipo, mesmo que recebam algumas críticas. Então, o ponto chave na ciência de dados está bem resumido nesta citação de Dan Myer. Ele diz, ``Perguntem a si mesmos qual problema você já resolveu, alguma vez, que valia a pena ser resolvido, onde você sabia antecipadamente todas as informações dadas? Onde você não tinha um excedente de informação e tinha que filtrar uma parte, ou onde você não possuia informação suficiente e precisava buscar mais informação?
+
+\paragraph{``}
+Acho que essa é um tipo de citação crítica porque, na ciência de dados, é isso que geralmente está acontecendo. Você se vê numa situação na qual realmente não possui dados suficientes para responder à questão na qual está interessado, e tem que explorar e tentar procurar por isso, procurar na internet, ou em outros lugares. Ou você está numa situação de sobrecarga, com excesso de dados, e tem que remover toda a informação irrelevante para tentar refinar sua questão. E você notará que eu disse ``questão" em ambos os casos. Acredito que isso é fundamental em nossa filosofia relativa à Ciência de Dados. Nós estamos interessados em responder a questões com os dados. Nós achamos que a questão deve vir primeiro, seguindo-se então dos dados. E isso se torna mais desafiador, porque, algumas vezes, você pode responder uma questão com alguns dados, mas também pode não conseguir responder à sua questão com alguns dados. Assim, esta aula é sobre focar em responder à questão em que você está interessado em resolver, com os dados que tem. Deste modo, pensei que deveria falar um pouco sobre os instrutores de quem você irá ouvir ao longo desta especialização. Somos todos professores da Escola de Saúde Pública Bloomberg,  do Departamento de Bioestatística da Johns Hopkins. E você pode dizer que todos nós fazemos muita estatística com dados em biologia e medicina.
+
+\paragraph{``}
+Brian Caffo trabalha em estatística do cérebro, analisando dados de imagens cerebrais. E eu trabalho na análise estatística de dados de genoma. E Roger Peng trabalha na análise estatística da matéria de partículas finas.
+
+\paragraph{``}
+Todos nós trabalhamos em problemas nos quais os dados nem sempre estão limpos, bons e fáceis de lidar. Todos nós trabalhamos em problemas nos quais as questões que queremos responder são complicadas e você tem que quebrá-las em partes. E todos nós trabalhamos em questões pelas quais temos paixão em tentar conseguir a resposta correta, tal que possamos ajudar na saúde das pessoas. Mas as técnicas que você vai aprender não são de aplicação exclusiva da biologia ou da medicina. Essa é apenas uma área na qual houve um ressurgimento recente na quantidade de dados disponíveis.
+
+\paragraph{``}
+Então por que ciência de dados? Por que você deve fazer este curso? Esta é uma capa da revista The Economist. Acho que já é um pouco antiga, uma história de alguns anos atrás. Mas fala sobre o dilúvio de dados e é realmente verdade. Nos últimos anos ficou muito, muito mais barato coletar dados. É mais fácil armazená-los. E existem tantas ferramentas de computação gratuitas por aí agora, ao ponto de você poder mesmo fazer algo com este dilúvio de dados que está, de alguma forma, meio que atingindo todas as diferentes áreas da ciência e negócios. 
+
+\paragraph{``}
+Assim, um outro termo do qual você já deve ter ouvido falar é "big data". E então vamos ouvir um pouco mais sobre o que pensamos sobre "big data" ao longo de toda a duração do curso, deste curso em particular, a Caixa de Ferramentas do Cientista de Dados. Mas "big data" é meio que uma nova fronteira, no sentido de que temos dados em áreas nas quais não estávamos habituados a ter estes dados. Não tínhamos acesso à informação sobre coordenadas GPS  dos carros de todas as pessoas no mundo inteiro. Não era possível sequenciar o genoma de toda a gente. E agora tudo isso é possível. Pois temos acesso a esses dados  e isso nos permite responder a questões que nunca fomos capazes antes. Então vivemos em tempos incrivelmente empolgantes, e você agora é alguém  que pode chegar e usar esses dados para responder a essas questões. 
+
+\paragraph{``}
+Então por que Ciência de Dados Estatística? Você notará que nós, todos os seus instrutores, somos professores de bioestatística, e portanto, esta especialização de Ciência de Dados irá, obviamente, ter uma pequena inclinação estatística. Eu penso que isso é apropriado, já que a estatística é a ciência de aprendizagem a partir dos dados. Pois é muito raro que você obtenha um conjunto de dados no qual todas as respostas sejam realmente claras, e sem qualquer incerteza. Em qualquer caso, onde há incerteza, é onde a estatística entra e desempenha seu papel. Novamente um artigo um pouco antigo do New York Times, mas que fala sobre como, para muitos universitários formados, a palavra-chave para abrir portas para muitos empregos, é aprender estatística.
+
+\paragraph{``}
+Então por que você é sortudo? Você tem sorte porque neste momento, bem agora,  é como o momento em que Jeff Bezos descobriu a internet. Ele se envolveu na construção de uma empresa na internet  no momento em que houve um aumento surpreendente no uso da internet,  e isso simplesmente abriu as portas para a oportunidade de construir algo incrível, e enorme e fantástico. E meio que este é exatamente o que o momento atual representa para os dados. É como se houvesse um crescimento gigantesco de dados em todas as áreas que você possa imaginar. E assim, é agora a oportunidade de "pular num foguete", e descobrir algo interessante,  e como que desenvolver isso em uma conquista realmente importante.
+
+\paragraph{``}
+Você também tem sorte porque as ferramentas, as competições e os websites têm se desenvolvido em torno da ideia de ajudar a aprender sobre os dados, mas também de se envolver em projetos com perfil de enorme visibilidade. Um dos exemplos é o Prêmio Patrimônio da Saúde, cuja imagem eu estou lhe mostrando aqui. O Prêmio Patrimônio da Saúde era um concurso de \$3 milhões para ver quem conseguia analisar dados e encontrar uma melhor forma de predizer  quem daria entrada em um hospital num outro ano. Você pode ver que é uma quantidade enorme de dinheiro que está sendo investida nestas ideias de desenvolvimento de algoritmos e de ciência de dados preditiva. Isso lhe dá uma oportunidade fantástica de se envolver em projetos que, de certa forma, não estavam acontecendo há cinco ou dez anos.
+
+\paragraph{``}
+Este curso de especialização irá se concentrar quase que exclusivamente na utilização da linguagem de programação R. E assim eu penso que é apropriado falar um pouco sobre o motivo pelo qual nós gostamos tanto do R. Nós obviamente gostamos do R, porque todos nós o usamos. Mas ele também está se tornando cada vez mais a linguagem mais comum na ciência de dados. Existem outras linguagem que também são bastante úteis. Não iremos falar muito sobre elas neste curso, mas elas são obviamente bons complementos à linguagem de programação R.  Por exemplo, Python. Nesta classe nos concentraremos em R porque ela tem um amplo conjunto de pacotes que lhe permitem ir desde o arquivos com dados mais brutos, até a relatórios interativos, e documentos e aplicativos web que você pode compartilhar com seus colaboradores.
+
+\paragraph{``}
+Então, algumas outras razões do porquê nós usarmos R é porque é livre, possui um conjunto completo de pacotes, como eu mencionei,  para todos os processos envolvidos na ciência de dados. Ele tem um dos melhores ambientes de desenvolvimento de qualquer linguagem, o RStudio. Também tem um incrível ecossistema de desenvolvedores. E o que eu quero dizer com isso é que há um monte de pessoas que estão desenvolvendo pacotes para o R. E eles também estão disponíveis para contato, por lista de discussão, por e-mail, ou pelo stack overflow. Então é realmente possível aprender sobre os últimos pacotes que estão sendo desenvolvidos. Eles também são muito fáceis de se instalar e se integram bem, algo que nem sempre acontece em diversas linguagens que são utilizadas para ciência de dados. Na sequência, acho que devo falar sobre quem é o cientista de dados. Nós vamos falar muito sobre ciência de dados.  E acho que devo mencionar algumas pessoas que eu considero como cientistas de dados,  que podem não se considerar assim, e nem outras pessoas as considerarem assim. O primeiro é Daryl Morey, que foi o gestor geral da equipe de basquete Houston Rockets, nos EUA. Ele usa dados para analisar jogadores de basquete e realizar transferências de jogadores. E por isso eu o considero como um cientista de dados, porque ele é uma pessoa que utiliza dados para responder questões ligadas ao basquete.
+
+\paragraph{``}
+Outra cientista de dados, da qual talvez você já tenha ouvido falar, é Hillary Mason. Ela foi a cientista de dados chefe na Bentley,  e agora ela trabalha na Accel Partners. E, portanto, ela usa dados para responder a uma série de questões sobre mineração da web, e perceber a forma como os humanos interagem uns com os outros, através das mídias sociais. Então, ela pode não se rotular uma cientista de dados, mas eu acho que a forma como ela utiliza os dados, é sugestiva do tipo de ideias que nós gostaríamos de lhe transmitir nesta especialização de ciência de dados. Se você está fazendo este curso, provavelmente sabe quem é Daphne Koller. Ela é a CEO do Coursera. Mas ela é também uma pessoa que está utilizando todos os dados que estão sendo recolhidos através do Coursera, para melhorar a forma como educamos e como fazemos a avaliação educativa nesta escala enorme em que o Coursera está provendo.
+
+\paragraph{``}
+E finalmente, Nate Silver é atualmente um dos mais famosos cientistas de dados, ou estatísticos, no mundo.  Ele utilizou uma enorme quantidade de dados públicos, completamente gratuitos, para fazer predições acerca de quem iria ganhar as eleições nos Estados Unidos, e ele foi notavelmente preciso. Eu vou então finalizar com ele,  como o último cientista de dados que eu vou apresentar, porque é fantástico  que ele pudesse utilizar dados públicos gratuitos e criar um produto tão fantástico, sobre o qual tantas pessoas leram e com qual estão entusiasmadas. 
+
+\paragraph{``}
+Assim, o nosso objetivo é ensinar você sobre uma série de diferentes competências que serão úteis para você como cientista de dados. Isto é um Diagrama de Venn e alguns estatísticos e cientistas de dados não gostam de Diagramas de Venn, mas eu vou lhe mostrar um de qualquer maneira. E então, este Diagrama de Venn tem Ciência de Dados, mais ou menos no centro deste diagrama de Venn, que intercepta várias competências diferentes. Assim, se você olhar bem aqui,  aqui está ciência de dados e envolve três componentes diferentes. Existem competências técnicas, de conhecimento matemático e e estatístico, e considerável experiência.
+
+\paragraph{``}
+Desta forma, a nossa especialização em ciência de dados irá focar um pouco em cada uma destas, mas sobretudo nas competências  em matemática, estatística e na competência técnica.
+
+\paragraph{``}
+A matemática e o conhecimento de estatística meio que falam por si próprios. Nós vamos lhe ensinar um pouco sobre matemática e um pouco sobre estatística, Competência técnica envolve dois componentes diferentes. Um deles nós vamos lhe ensinar um pouco, é sobre programação, ou pelo menos programação com R, a qual vai lhe permitir acessar os dados e os manipular, analisar e fazer gráficos. Mas a competência técnica tem outro componente, que é a capacidade de procurar sozinho respostas às questões. Um componente chave do trabalho de um cientista de dados neste momento é que a maioria das respostas ainda não se encontram delineadas num manual. Tudo isso é algo novo que está acontecendo. Então uma das principais competências de um cientista de dados é ser capaz de ir ao Google, ao Stack Overflow ou outro site, e procurar o que você precisa para aprender e descobrir quais respostas você tem e quais respostas não tem, e então descobrir como utilizar a informação que você tem para responder às questões que você gostaria de responder.
+
+\paragraph{``}
+Outra razão obviamente importante é emprego. Talvez seja essa a razão pela qual você está fazendo esta especialização. E então você pode ver que este é um gráfico com a listagem de empregos de ciência de dados ao longo do tempo e é claro que está aumentando. E nós falaremos um pouco sobre por que você não deve extrapolar, necessariamente, destes dados indefinidamente, mas eles sugerem que  a ciência de dados é uma área "quente" e em crescimento, e obviamente estamos tão entusiasmados sobre isso e esperamos que você também esteja entusiasmado.
+
+\paragraph{``}
+Este curso, Caixa de Ferramentas do Cientista de Dados, irá continuar com as aulas acerca dos três seguintes aspectos. Primeiro, vamos apresentá-lo ao curso. Depois, vamos falar um pouco sobre obter as ferramentas que você precisa instalar, e esperamos que você o consiga fazer. E depois vamos lhe dar conhecimentos básicos em ciência de dados, os mais importantes, para que você esteja pronto para pular, para qualquer uma das aulas individuais e realmente evoluir. Espero voltar a vê-lo no resto do curso.
+{\large \textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{A Caixa de Ferramentas do Cientista de Dados}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Na segunda semana do curso, iremos cobrir uma série de softwares que você irá instalar, os quais constituem a caixa de ferramentas do cientista dos dados como o descrevemos para o programa do curso A primeira pergunta que você pode estar se fazendo é, quais softwares você precisa?  Bem, para saber quais softwares você precisa, você tem que  saber exatamente o que um cientista de dados irá fazer. Portanto nesta sequencia do curso iremos abordar  todos os diferentes aspectos do que é ser um cientista dos dados. Começaremos definindo uma questão de interesse, e então identificaremos o conjunto de dados ideal. Tente responder a essa pergunta. Determinar se os dados estão realmente acessíveis, muitas vezes o conjunto de dados ideal não está nem mesmo disponível. E então, discutiremos maneiras de como sair e obter dados, quer seja de uma base da dados, ou de um website, limpando os dados de modo que possam ser processados e analisados. Conduzir alguma forma de análise exploratória incluindo traçar gráficos e agrupamentos de modo que você possa identificar padrões que você não conhecia antes no conjunto de dados Realizar predição ou modelagem estatística para tentar tentar criar um tipo de intuição sobre o que irá acontecer na próxima amostra que você obter. Interpretar seus resultados, desafiando-os. E então sintetizá-los e escrevê-los de maneiras reprodutíveis que possam ser compartilhados com outras pessoas. Para finalizar, discutiremos como distribuir os resultados por meio de coisas como gráficos interativos, também por textos e apresentações e finalmente por aplicativos interativos construídos no topo do R O principal trabalho em ciência dos dados em termos desta especialização em ciência dos dados é a linguagem de programação R Existem outras linguagens alternativas que também são muito boas para a ciência dos dados mas nós nos concentraremos no R, visto que é uma das linguagens mais amplamente utilizadas e suportada por um grande grupo de desenvolvedores que podem contribuir com novos pacotes todos os momentos que podem melhorar e estender a funcionalidade do R. Nós o instalaremos na segunda semana do curso Faremos a maioria da nossa codificação no RStudio RStudio é um ambiente integrado de desenvolvimento, uma IDE (Integrated Development Environment) para o R e acho que é, atualmente, uma das melhores IDEs para muitas outras linguagens e também para ciência dos dados.
+
+\paragraph{``}
+A IDE R é de graça, assim como a linguagem R, então nós faremos o download desta IDE e a configuraremos na segunda semana do curso.
+
+\paragraph{``}
+A interface se parece com algo assim E nós falaremos muito mais disso na segunda semana e mais tarde no restante do curso mas você pode ver aqui no canto superior à esquerda que eu tenho um arquivo Isto é um novo arquivo .R que irá conter algum código que nós escreveremos Nós podemos escrever esse código aqui, no arquivo no terminal e então, aqui em baixo, você vê um console Nós entraremos com comandos na linha de comando aqui no console E então aqui você pode ver outra informação que poderá se interessar em olhar Ver gráficos que você fez recentemente, os pacotes que você carregou ou os arquivos de ajuda para funções específicas que você pode estar interessado.
+
+\paragraph{``}
+Há diversas outras funções muito legais que vem com o RStudio e nós falaremos sobre elas durante as aulas.
+
+\paragraph{``}
+O tipo principal de arquivo que nós interagiremos, para a maior parte do curso, é um script R Um script R é um arquivo com a extensão .R, e é na verdade um arquivo texto Exceto que o arquivo texto contém pedaços de código R, então aqui você pode ver um comentário Isto não é realmente executado pelo R mas pode incluí-lo de forma que as pessoas possam entender o que está acontecendo no código Existem outras coisas como funções e adiante, sobre as quais nós falaremos muito mais quando estivermos programando Se olhar esta função lhe parece intimidador agora você deve se preocupar com ela quando estiver no curso de programação R Você será um mago e será capaz de fazer coisas muito mais complicados do que isso.
+
+\paragraph{``}
+Outra coisa que usaremos serão os documentos markdown em R. Pesquisa reprodutível envolve criar documentos que possam ser reprodutíveis E outras palavras, eles podem ser reexecutados e produzirão exatamente os mesmos números que você obteve quando você fez a sua análise E o veículo principal para fazer isso é por meio de documentos markdown e markdown em R. Então, este é um arquivo com a extensão .RMD e ele possui forma muito bem estruturada de arquivo texto Nós falaremos muito mais sobre o que é esse formato mais tarde mas você poderia pegar este arquivo estruturado e pode processá-lo para HTML com este botão aqui e você acaba criando um arquivo HTML que estará muito bem formatado. Por exemplo, o que você digita em textos se parece com algo assim e isto se transforma em uma bela lista com marcadores em HTML, uma vez que você o processe para HTML. Nós falaremos muito mais sobre como esse arquivo funcionar mais tarde no curso.
+
+\paragraph{``}
+Nós falaremos sobre como faremos o controle de versionamento distribuído usando Github e Git. Parte deste curso será configurar sua conta do Github e criar um portfólio de todas as coisas diferentes que você fizer durante a especialização que você pode então compartilhar com os seus empregadores Ou você pode compartilhar e contribuir para outros projetos, para que você possa ter seu nome na comunidade de ciência dos dados.
+
+\paragraph{``}
+Nós executaremos a maioria dos comandos do terminal ou da interface de linha de comando. Isto é uma interface de linha de comando, não se parece muito aqui você pode ver que há um terminal aqui no canto superior esquerdo e nós entraremos comandos com textos estes comandos então executarão, permitindo os programas que nós iremos falar sobre. Então, este foi um breve passeio de todas as ferramentas que nós usaremos neste curso.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Obtendo Ajuda}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Esta aula fala sobre como obter ajuda. Esta aula é relevante pare este curso, Caixa de Ferramentas do Cientista de Dados, que você está realizando neste momento,  e também para todos os cursos de que irá participar na especialização.
+
+\paragraph{``}
+Tenha em mente que, em um curso normal, você poderia estar numa classe  com 30 a 100 pessoas, você levantaria a mão, faria uma pergunta  e teria imediatamente uma resposta do seu professor. Mas em uma classe como esta, em um curso livre online massivo, pode haver até 100.000 pessoas realizando o curso. O que você pode fazer é colocar as suas questões no fórum de perguntas.  E, se tudo correr bem, os seus colegas estudantes irão avaliá-las positivamente se forem boas perguntas, e seu instrutor irá tentar responder a tantas perguntas quanto possível. Mas, provavelmente, o mais frequente é que sejam os seus colegas ou os assistentes do professor que responderão. Somos três pessoas lecionando estes nove cursos, e nós vamos tentar dar o máximo para responder às suas perguntas. Mas obviamente esse é um recurso limitado. Então, contar com os seus colegas e sua comunidade de auxiliares do curso é uma ótima forma de se envolver. Também descobrimos que a comunidade formada  ao redor dos fóruns de mensagens e de cursos online massivos é fantástica. E é, provavelmente, a melhor parte do aprendizado durante toda a experiência. Esperamos que você se envolva  e que seja um participante ativo nos fóruns.
+
+\paragraph{``}
+Está bem claro que a resposta mais rápida é frequentemente aquela que você encontra sozinho. Para tentar responder às suas perguntas, você deveria tentar procurar no Google ou no Stack Overflow. Se você fizer uma pergunta que é muito simples de procurar pelo Google, você frequentemente vai obter uma resposta dizendo para procurar no Google ou ler a documentação, o que não é a maneira mais fácil de obter a resposta que você quer.
+
+\paragraph{``}
+Uma parte importante de ser um participante ativo, em um ambiente comunitário como o deste curso, é se você souber uma resposta para uma pergunta, colocar sua resposta no fórum. Se você está tendo dificuldades com alguma parte em particular,  seja conceitual ou prática como um exercício de programação, é quase certo que há diversas pessoas que estão tendo dificuldades com a mesma coisa. Todos irão gostar se você dedicar um tempo para colocar no fórum a forma que você descobriu para resolver aquele problema. Portanto, achei que deveria mencionar algumas funções R importantes,  que irão ajudá-lo a encontrar respostas para algumas perguntas que você pode ter. Quando você tem uma função em R –  nós vamos falar um pouco mais sobre R mais à frente no curso. Existem várias maneiras diferentes para você obter o arquivo de ajuda sobre essa função. Um exemplo é que você pode digitar assim, você pode digitar ?rnorm, e isso lhe mostrará qual é o arquivo de ajuda para a função rnorm. Você também pode fazer uma procura assim, com o comando help.search. E se você utilizar help.search, talvez nem precise necessariamente ter que indicar o nome da função com exatidão. A função ainda procurará nos arquivos de ajuda e tentará encontrar as coisas para você. E se você quiser saber os argumentos de uma função, você pode usar o comando args, desta forma. "args de rnorm" irá lhe dizer quais os argumentos da função.
+
+\paragraph{``}
+Estas funções são muito úteis se o seu objetivo for tentar descobrir como o R funciona no caso de uma função específica. Mas podem não ser tão úteis, se o que você quiser for entender os tipos de conceitos por trás dessas funções.
+
+\paragraph{``}
+Uma outra coisa que você pode querer fazer  é olhar um pouco mais a fundo no código. Se você quiser fazer isso, pode simplesmente escrever o nome da função, sem colchetes, e isso irá, na verdade, lhe mostrar o código completo da função O que você vê aqui se eu escrever rnorm assim. O que eu acabo obtendo na console do R é isto aqui. Eu obtenho todo o código que corresponde a essa função. Você também pode olhar este link aqui, para um guia de referência com muitas funções R úteis.
+
+\paragraph{``}
+Um ponto importante que você encontrará muito neste curso, é como fazer uma pergunta sobre o R. Há alguns componentes diferentes  que você deve ter em mente. Primeiramente, você deve delinear os passos que você executou para criar este problema. Se você rodou três funções em ordem, você deve reproduzir quais são essas três funções.
+
+\paragraph{``}
+E então você deve dizer qual era o resultado que você esperava obter, e qual foi o resultado obtido. Eu esperava que ele me desse a resposta para esta pergunta, mas em vez disso me deu um erro. Uma coisa muito importante a se ter em conta é que os pacotes R, e o próprio R, e todas as outras ferramentas das quais nós vamos falar, evoluem ao longo do tempo. Por isso é muito importante que você diga qual a versão do produto que você está usando. A versão do pacote, a versão do R que você está usando e em qual sistema operacional você está trabalhando. Seja se você está em um Mac, Linux ou Windows.
+
+\paragraph{``}
+Quando faz uma pergunta sobre análise de dados,  há um conjunto de coisas parecidas que precisa relatar. Primeiro, qual é a pergunta que você está tentando responder. Digamos que você está tentando relacionar a variável y com a variável x. Então, quais são os passos ou ferramentas você usa para responder isso? Pode ser uma combinação de ferramentas R, ferramentas externas e talvez alguma intuição. E então, de novo, você relata o que esperava ver. Eu esperava ser capaz de descrever  a relação entre as variáveis, e o que eu vejo em vez disso? Eu vejo, por exemplo, não sei, algum tipo de gráfico de pontos maluco e eu não sei o que significa. O importante a se ter em conta aqui também é em quais outras soluções você poderia ter pensado. Algumas vezes, você experimenta três ou quatro coisas diferentes para tentar obter a resposta certa. Se disser o que você tentou, ou as várias coisas que tentou,  então quando as pessoas tentarem responder à sua pergunta,  elas podem ir diretamente a alguma coisa que você ainda não tentou. Um ponto importante quando se faz perguntas em um curso, com participação tão massiva como este,  é ter certeza de que você seja muito específico nos títulos  das perguntas que faz no fórum. Alguns maus exemplos de títulos são coisas como, por exemplo: "Ajuda!" "Não consigo obter uma regressão com um modelo linear." Você não está dando muitos detalhes sobre qual é exatamente seu problema e como ele pode ser abordado. Uma forma melhor de fazer a pergunta é dizer, por exemplo, "Eu tenho esta função e estou usando a versão 2.15 do R e aqui está o erro que está sendo produzido: é um erro tipo falha de segmentação que está sendo produzido, E é apenas produzido quando eu tenho um conjunto de dados grandes, e aqui está o programa que estou usando. Estou usando Mac OS X 10.6.3."
+
+\paragraph{``}
+Uma pergunta ainda melhor é usar um título um pouco mais resumido. Neste caso, você começa novamente pela função sobre a qual está perguntando,  e diz, eu estou perguntando sobre R2.15 neste sistema operacional. E sucintamente descreve a falha de segmentação em tabela de dados grande.  Ao se focar em detalhes específicos, significa que as pessoas darão as respostas que você precisa mais rapidamente. Há vários tipos idênticos de perguntas e detalhes específicos  que você deverá fornecer quando fizer perguntas sobre problemas em análise de dados. De modo geral, quanto mais específico for, mais rapidamente irá obter uma resposta.
+
+\paragraph{``}
+Há algumas regras de etiqueta que gostariamos de encorajar, em relação ao modo de utilização dos fóruns. Ou, de um modo mais geral, quaisquer recursos de ajuda, não necessariamente os fóruns. Mais uma vez, descreva o seu objetivo. Qual a questão que está tentando responder? Seja bem explícito.
+
+\paragraph{``}
+Tente fornecer o mínimo de informações. Se fornecer muitas informações, será difícil para as pessoas filtrarem essas informações e descobrirem onde está o verdadeiro problema. Ser bem educado nunca faz mal a ninguém e frequentemente fará você obter respostas mais rapidamente. Dê retorno e coloque soluções nos fóruns. Se você colocar uma questão no fórum e alguém der uma resposta no site Stack Overflow em vez de no site do curso, é boa educação colocar essa informação no site do curso, para que outras pessoas possam pesquisá-la e encontrar essa resposta também. Por favor use os fórums em vez de emails pessoais. Nós estamos muito entusiasmados em tentar ajudá-lo a aprender a ciência de dados. Mas é muito fácil sobrecarregar as caixas de entrada  dos instrutores ou auxiliares se vocês todos começarem a enviar emails ao mesmo tempo. Quando houver erros nos trabalhos a fazer, descreva-os nos fóruns, e nós tentaremos resolvê-los o mais rapidamente possível.
+
+\paragraph{``}
+Algo que você não deve fazer imediatamente é assumir que encontrou um erro em um programa grande. Por exemplo, dizer que encontrou um erro no R e que por isso as coisas não estão funcionando. Ficar chorando por ajuda ao invés de fazer o seu trabalho não é adequado,  assim como não é implorar a outras pessoas para que façam o seu trabalho para você.
+
+\paragraph{``}
+Não coloque questões de trabalhos em listas de email ou nos fóruns do curso, Se você coloca as perguntas ou as respostas no fórum, isso prejudica a experiência de todos os outros.
+
+\paragraph{``}
+Não envie emails para muitas listas simultaneamente. Tente ver qual a lista mais apropriada e envie um email apenas para esta.
+
+\paragraph{``}
+Por exemplo, você não deve perguntar questões genéricas sobre análise de dados em fóruns do R. Essas perguntas são normalmente redirecionadas para as aulas. Tente manter estas nos fóruns do curso de R, onde esperamos que haja um grupo grande de pessoas interessadas em responder às mesmas perguntas.
+
+\paragraph{``}
+O conteúdo destes slides é de Roger Peng, que é um outro professor nesta especialização. Ele tem alguns vídeos sobre como obter ajuda. Este é um link para o seu vídeo no YouTube, que foi inspirado na palestra de Eric Raymond, Como fazer perguntas de forma inteligente.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Encontrando Respostas}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Este é um breve vídeo de sequência da aula "Obtendo Ajuda" e é sobre encontrar respostas. A razão pela qual existem dois vídeos sobre isto é porque ela é uma habilidade muito importante na ciência dos dados. Assim você poderá ver uma das três habilidades fundamentais neste diagrama de Venn, aquei estão as habilidades de hackear. E a razão pela qual essa é uma das três habilidades fundamentais, é porque quase nada do conhecimento que você necessitará se encontra definido nos textos padronizados. Eles estão frequentemente dispersos em diferentes locais que você terá que ser capaz de a sintetizar ou procurar a informação de que necessita. Seja sobre qual dos conjuntos de dados você precisa usar, ou a análise estatística que você precisa fazer, ou qual o pacote R que necessita utilizar. Tudo isto se encontra disperso, e você tem que estar disposto a fazer um pouco de trabalho árduo e esforço para o localizar. Obviamente nós lhe diremos o máximo que pudermos nas aulas, mas estamos muito limitados pela quantidade de tempo que podemos lecionar em cada semana, e por isso é importante ser capaz de localizar essas informações por si mesmo. 
+
+\paragraph{``}
+Algumas características chave dos hackers são que estão dispostos a irem procurar e encontrar as respostas por si próprios, mesmo que isso requeira um pouco de tempo ou um pouco de esforço. Eles são conhecedores sobre onde encontrar essas respostas, seja no Google, Stack Overflow ou Cross Validated (fórum) ou histórico de mensagens de listas de correio (mailing list) 
+
+\paragraph{``}
+Eles não se intimidam por novos tipos de dados ou pacotes. É muito comum como cientista de dados receber um novo tipo de dados, ou um novo tipo de pacote que você necessita aprender muito rápido para ser capaz de analisar os dados. Não se intimidar com isso é importante, e depois não ter receio de dizer que você não sabe a resposta a uma pergunta. Então uma característica chave, eu diria,  a forma de resumir isso é estar vivo mas implacável. Indo em busca da resposta e tentar encontrá-la, mas sendo educado enquanto faz isso. E o Google também sabe disso. No seu processo de recrutamento eles olham para estes tipos de características. O tipo de pessoas que vão atrás destes tipos de coisas, tal como descritos neste artigo que eu referenciei aqui. 
+
+\paragraph{``}
+Então uma questão importante é onde pesquisar, para diferentes tipos de questões. Então para a nossa programação você poderá querer ir diretamente ao arquivos dos fóruns da aula, onde a aula que você está cursando irá focar em questões ou funções muito específicas. E lá estará um grande grupo de pessoas interessadas. Você pode ler o manual ou os arquivos de ajuda como eu lhe mostrei no vídeo "Obtendo Ajuda". Você pode pesquisar na web. Essa é na verdade uma das melhores maneiras de o fazer. Pode perguntar a um amigo experiente. isso é ainda melhor se tiver alguma pessoa que você sabe que já é um pouco cientista de dados, Eles frequentemente podem lhe ajudar. E depois pode postar nos fóruns do curso e tentar obter as suas respostas. Lembre-se de ser específico com as suas questões Você também pode postar em fóruns fora do curso. A lista de correio eletrônico de R ou Stackoverflow, se você tiver questões sobre R. 
+
+\paragraph{``}
+Para questões de análise de dados ou estatísticas, vai querer iniciar novamente pelos fóruns da classe, e depois ir para a web ou para amigos. 
+
+\paragraph{``}
+E depois há também outro fórum externo chamado CrossValidated onde você pode perguntar esses tipos de questões. Para outros aplicativos terá de ir aos sites web específicos desses aplicativos. para o GitHub, eles têm muitos tutoriais e boa informação que se pode utilizar para obter respostas. 
+
+\paragraph{``}
+Um ponto importante a saber é que procurar questões de ciência dos dados nem sempre é a coisa mais fácil do mundo. Portanto o melhor local para iniciar se você tiver uma questão razoavelmente genérica é frequentemente nos fóruns E as pessoas podem direcioná-lo para onde deve pesquisar fora dos fóruns. 
+
+\paragraph{``}
+Tenha em mente que o Stackoverflow com a etiqueta (tag) R é realmente um bom lugar para se obter informação sobre R. E por isso, use essa etiqueta porque se apenas usar a letra R,  é obviamente um pouco difícil de pesquisar. 
+
+\paragraph{``}
+Você pode sempre tentar a lista de correio eletrônico de R para questões de software ou em CrossValidated para questões mais genéricas. 
+
+\paragraph{``}
+Geralmente o que tenho verificado é que se eu for trabalhar no Google, pesquisando no Google, eu normalmente escrevo qualquer coisa, como o tipo de dados e depois data analysis (análise de dados), ou escrevo o tipo dos dados e depois o nome do pacote R. Percebi que tipo de dados e pacote R normalmente funcionam um pouco melhor que tipo de dados (data type), data analysis quando procurando este tipo de coisas no Google. 
+
+\paragraph{``}
+Outra coisa a se ter em mente é que  análise de dados ou ciência de dados é comum ser chamado outra coisa diferente,  dependendo do tipo de dados que estamos olhando. então, por exemplo dados médicos podem se chamar bioestatística. Para dados da web podem chamar-se ciência de dados (data science). Ppara dados em visão computacional poderá ser chamado aprendizado de máquina (machine learning), ou processamento de linguagem natural para dados de texto, e assim por diante. Deste modo, saber qual a palavra certa para procurar é frequentemente metade da batalha. E assim, você pode normalmente descobrir isso ao postar nos fóruns, e as pessoas irão informá-lo qual é a palavra certa para procurar. 
+
+\paragraph{``}
+Novamente, os créditos para isto vão para o video Obtendo Ajuda do Roger. E foi inspirado pelo ``Como Perguntar Questões da Forma Certa" do Eric Raymond.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{R Programming Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Esta é a primeira de uma série de aulas com uma visão geral, que lhe contarão sobre os outros cursos na especialização em ciência dos dados. Irei começar pela programação R, que é outro dos cursos mais fundamentais em nossa especialização em ciência de dados. R é a linguagem que nós iremos utilizar para a maioria das análises de dados e ciência de dados que iremos executar no lado da ciência da computação. Então, a aula de programação R irá lhe falar um pouco sobre tipos de dados, sobre como particioná-los, lê-los e escrevê-los em arquivos. Como escrever funções, executar coisas com esses dados,  como depurá-los e depois falaremos um pouco sobre simulação e otimização. Por isso agora vou só lhes mostrar alguns exemplos sobre o tipo de coisas que vocês irão aprender nesta aula. Por exemplo irão aprender sobre a função readLines para ler texto de um arquivo. Neste caso, o que iremos fazer é: leremos linhas a partir do website da Escola de Saúde Publica da Johns Hopkins Bloomberg  Este aqui é o website. Assim o que fazemos é ir ao website e, então, usamos a função readLines para ler o texto desse site. E então olhamos para esse texto e podemos realmente ver o código HTML, e que foi sugado para dentro do R e que pode então ser usado para analisar o website. 
+
+\paragraph{``}
+Outra coisa que aprenderá é como descobrir quando algo está errado com a sua função. Portanto você irá escrever muitas funções nesta aula. Deste modo, uma coisa que você irá querer saber é, quando elas não estão funcionando, é o porquê de elas não estarem funcionando. Então este é um slide que vem de uma daquelas perguntas: "Como você descobre?", "O que você estava esperando?" e "O que você obteve?" E como reproduzir os problemas, de forma que consiga perceber como funciona essa função. 
+
+\paragraph{``}
+Bem, você aprenderá coisas como funções mais detalhadas. Por exemplo, está é a função "lapply", e a função "lapply" recebe um tipo particular de argumento. Uma lista, neste caso, e aplica uma função a todos os elementos dessa lista e retorna algo para você. Isso é interessante porque é um dos muitos exemplos  nos quais a análise, na realidade, é efetuada internamente, em código C. Mas você não tem efetivamente acesso a isso. Você pode usar apenas a função R. Isto cobrirá tudo desde o básico, até funções mais complicadas como "lapply". E irá prepará-lo muito bem para o resto da sequência do curso. 
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Getting Data Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Esta é a visão geral do curso de Obtenção e Limpeza de Dados. Este na verdade é um dos cursos mais especiais da nossa especialização em ciência dos dados, mas penso que é um dos componentes mais fundamentais do ser um cientista de dados, que é ser capaz de sair e obter dados a partir de qualquer fonte, independentemente do formato em que estejam, e torná-los em um conjunto de dados limpos e processados, que então podem ser usados para responder questões. Então, nesta lição falaremos sobre dados brutos versus dados limpos, e como baixar arquivos. Ler dados de um grande número de  diferentes fontes, uni-los, reformatá-los. resumi-los, e então encontrar fontes de dados que podem ser usadas para complementar os dados que você já tem.
+
+\paragraph{``}
+Aqui temos algumas coisas diferentes sobre as quais você pode aprender. Como, por exemplo, se conectar a um banco de dados MySQL, pelo R. Isto é, na verdade, usar um pacote do R para acessar o R MySQL, e você poderá conectar o banco de dados e ler os dados dali. Outra ideia é sobre unir os dados. Você pega diferentes componentes de um conjunto de dados. Pode haver então um arquivo ou nuvem que contenha revisões, e outro que contenham soluções, digamos, de uma avaliação de pares, e você quer combiná-los. Assim, você pode usar comandos do R para juntar esses grupos de dados.
+
+\paragraph{``}
+E então, falando um pouco sobre dados crus versus dados processados. quais são os que vêm na forma mais crua possível, a fonte original dos dados versus os dados processados. Os dados que estiverem prontos para a análise,  prontos para serem usados por outras pessoas, surgiram depois que você os juntou, organizou, subdividiu e transformou  no conjunto de dados organizados e arrumados que as pessoas possam usar. Esse é o processo de obtenção de dados.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Exploratory Data Analysis Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Esta aula é uma revisão da análise exploratória de dados, que é o próximo curso na sequência de cursos. 
+
+\paragraph{``}
+No curso de análise exploratória de dados iremos cobrir os princípios  de como criar gráficos analíticos, gráficos que lhe permitirão analisar dados. Falaremos sobre gráficos exploratórios, como explorar os dados e compreendê-los, criando gráficos suficientes para entender o essencial do que se passa com os seus dados. Falaremos sobre os sistemas de criação de gráficos em R, sobre gráficos básicos, gráficos do pacote lattice,  e também do ggplot2, que é um pacote popular surgido recentemente. Falaremos sobre agrupamento hierárquico, agrupamento por k-médias, e também um pouco sobre redução dimensional. Estas são técnicas que podemos usar  para nos aprofundarmos e fazermos uma primeira exploração dos dados. 
+
+\paragraph{``}
+Por exemplo, iremos falar sobre como usar o pacote ggplot2 para fazer gráficos como este,  gráficos de pontos bonitos e de formas suaves, que lhe permitirão entender o relacionamento entre as diversas variáveis. Falaremos sobre os princípios de gráficos analíticos, quais os princípios que você precisa para criar gráficos que sejam úteis para perceber  o que se passa com os dados com os quais se está trabalhando. 
+
+\paragraph{``}
+Depois iremos também falar de tópicos como agrupamento por k-médias. Como é que, a partir de um conjunto de observações obtidas na coleta de dados, como é que agrupamos essas observações  em grupos relativos que são semelhantes entre si, como um método para explorar os dados e perceber a sua estrutura. Estes são apenas alguns exemplos de ideias que serão cobertas no curso de análise exploratória de dados. 
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Reproducible Research Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Pesquisa reprodutível é um de nossos outros cursos únicos. A pesquisa reprodutível se preocupa em criar códigos e documentos que irão reproduzir completamente toda a análise que foi feita de uma forma transparente, para que ela possa ser comunicada a outras pessoas. Esse é um dos componentes fundamentais em ser um cientista de dados. Porém, geralmente é deixado de lado, como um componente secundário de vários outros programas de ciência de dados. Falaremos então nesse curso de pesquisa reprodutível, sobre a estrutura de uma análise de dados, como criar, organizar e juntar toda esta estrutura. Vamos falar sobre alguns dos componentes da pesquisa reprodutível, em termos de programação, o que inclui Markdown, LaTex e R Markdown. E depois vamos falar um pouco de uma ideia única chamada de análise de dados baseada em evidência, que se refere a fazer a análise de dados com as melhores práticas usadas nesta área atualmente. Também sobre formas de publicar seus dados fora da sua própria organização, como com o RPubs. Então, por exemplo, falaremos dos passos existentes em uma análise de dados ou em um problema de ciência de dados. Você tem que passar por todo o processo, desde definir a pergunta, até a criação de um tipo de código reprodutível que possa ser compartilhado com outras pessoas. Alguns desses passos são vistos em diferentes partes da aula, logo a pesquisa reprodutível sintetiza onde essas partes se unem. 
+
+\paragraph{``}
+Além disso, conversaremos sobre quais arquivos são componentes de uma análise de dados. Tudo desde dados brutos até as figuras exploratórias, para organizar a análise final que você irá conduzir. 
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Statistical Inference Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Inferência estatística será um curso que trata  de muitas das ideias relacionadas com extração de informações generalizáveis dos dados. Esse curso então tratará de assuntos como probabilidade básica, funções de verossimilhança, intervalos de confiança, testes de hipóteses, bootstrapping e poder estatístico. Essas são as ideias fundamentais  que geralmente se ouvem quando as pessoas divulgam suas análises de dados. 
+
+\paragraph{``}
+Vamos tratar, por exemplo, do modo como se pode modelar uma virada de moeda matematicamente ou proporções. Também falaremos um pouco da forma como se modelam distribuições contínuas, como, por exemplo, a distribuição normal, da qual provavelmente você já ouviu falar, como forma de medir a variabilidade  de uma vasta quantidade de variáveis como QI, altura, etc. 
+
+\paragraph{``}
+E então falaremos de coisas como bootstrapping, onde você usa os próprios dados na criação de medidas de variabilidade que podem ser usadas para decidir o quão generalizável são as respostas obtidas de uma análise em particular. 
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Regression Models Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Uma das ferramentas mais utilizadas para realizar  qualquer análise estatística ou de ciência de dados é um modelo de regressão. Portanto, o próximo curso cobrirá estes modelos de regressão. Alguns dirão que é apenas mais uma maneira de criar uma função preditiva supervisionada, mas é um pouco mais do que isso, no sentido de que é uma das ferramentas mais interpretáveis e facilmente utilizáveis  que você pode usar para explicar sua análise para pessoas que são de fora da comunidade de ciência de dados. E, como comunicação é um componente crítico em ciência de dados, isto torna os modelos de regressão um componente crítico da caixa de ferramentas. 
+
+\paragraph{``}
+Este curso cobrirá regressão linear e regressão múltipla, ideias como variáveis de confusão,  que até veremos um pouco neste curso, predições usando modelos lineares, suavização de gráficos de pontos por "splines" e, então, inferência com reamostragem e talvez regressão ponderada.
+
+\paragraph{``}
+Também cobriremos algumas ideias, incluindo ideias que você ouve frequentemente quando lê artigos sobre análises estatísticas na imprensa popular. Coisas como regressão à média – por que filhos de pais altos tendem a serem altos, mas não tão altos como eram seus pais? Estes tipos de ideias fundamentais serão explicadas no curso de regressão. Também conversaremos um pouco sobre o modelo básico de regressão, haverá um pouco mais de matemática neste curso do que há nos outros cursos,  um pouco de derivação e entendimento das ideias básicas em um modelo de regressão. Mas cálculo e álgebra linear não são requeridos. Nós trabalhamos duro para fazer com que o conhecimento básico de álgebra seja o suficiente para seguir este curso. 
+
+\paragraph{``}
+Também aprenderemos sobre análise de regressões multivariadas. Algumas vezes queremos relacionar uma variável com outra variável, mas você quer levar em conta o que acontece quando você inclui outras variáveis, ajustando sua análise. Você normalmente ouve sobre ajuste de análise e isto também será abordado nesse curso. 
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Practical Machine Learning Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Esta é uma visão geral de aprendizado de máquina na prática. Existe um grande número de cursos de aprendizado de máquina por aí, e são geralmente de muito boa qualidade. O foco dessa aula será, então, principalmente a aplicação "mão-na-massa" do aprendizado de máquina em R. A ideia é tentarmos focar nos pacotes de R e nas ideias que permitirão que você obtenha dados e execute o aprendizado de máquina nesses dados. Também falaremos um pouco sobre como, conceitualmente, cada um desses métodos de predição funcionam e talvez sobre alguns casos onde podem haver problemas. Então indicaremos recursos onde você pode aprender mais profundamente  sobre os detalhes matemáticos ou computacionais que estão por detrás destes métodos, se estiver interessado. Então, o conteúdo de Aprendizado de Máquina na Prática. Iremos começar com um desenho de estudo para predição, discutiremos validação cruzada. O pacote caret para predição em R, um pouco de pré-processamento. Fazer predições com uma variedade de ideias diferentes, como regressão ou árvores de decisão. Falar de ideias gerais como "boosting", "bagging", mistura de modelos, e um pouco sobre previsões temporais. Aqui estão alguns exemplos de coisas que vamos cobrir. Vamos falar de conceitos básicos, como o que são positivos verdadeiros e falsos positivos. O que são negativos verdadeiros e falsos negativos. sensibilidade, especificidade, este tipo de coisas. Iremos ver também como lidar com preditores correlacionados, através do pré-processamento de dados com preditores correlacionados. Quando os tiraremos do conjunto de treinamento, e iremos falar um pouco de "boosting". Este é um conceito mais técnico de aprendizado de máquina, mas pode ser aplicado de forma simples com funções de R, para realmente melhorar a precisão nas previsões.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Building Data Products Overview}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Esta é uma visão geral de Construção de Produtos de Dados, que é um tipo de aula única que fala sobre o que você faz com a análise de dados ou as funções R que você criou; uma vez que você os construiu e quer compartilhá-los com alguém mais. Então vamos falar sobre coisas como pacotes R, como construí-los, desenvolvê-los e compartilhá-los. Esta é uma das melhores formas de fazer seu nome como um cientista de dados. Um dos principais meios que fazem pessoas contratarem outras pessoas ou de quem ir atrás é se eles construíram algo que estas próprias pessoas usam. E então, pacote R é o melhor jeito de expor seu nome neste meio. Vamos também falar sobre como fazer gráficos interativos com rChart e como fazer aplicativos interativos com Slidify e Shiny. 
+
+\paragraph{``}
+Então, com pacotes R você pode se sentir como um tipo de engenheiro; você irá construir um pacote R para compartilhar o código que permitirá que outras pessoas usem e melhorem suas análises. Então, vamos lhe ensinar como construí-los; vamos também lhe ensinar como usar o rCharts; você pode pensar que isso é algo para marketing, construir gráficos, gráficos interativos como os que você vê no New York Yimes, que irão permitir compartilhar a informação que poderá se interagir com outras pessoas. 
+
+\paragraph{``}
+E então, finalmente, Shiny, aplicativo para usuários finais, em que você pode agora usar R para construir aplicações web que são bem complexas e confusas, e permite que você simplesmente interaja com os dados ou com suas análises de um jeito único e interessante. Então, vamos falar sobre todas essas coisas na Construção de Produtos de Dados.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Installing \r{} on Windows {Roger Peng}}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+[SEM SOM] Eu vou descrever brevemente como instalar R num computador com Windows. A primeira coisa que você precisa fazer é abrir o seu navegador web, eu vou fazê-lo aqui. Eu estou usando o Chrome mas isso não importa. E você precisa ir ao "Comprehensive R Archive Network" ou CRAN, eu vou apenas digitar aqui. 
+
+\paragraph{``}
+Devagarinho eu diminuo a quantidade de vermelho e aumento a quantidade de azul, até obterDevagarinho eu diminuo a quantidade de vermelho e aumento a quantidade de azul, até obter 
+
+\paragraph{``}
+você verá que aqui no topo existem três opções, Linux, Mac e Windows. Você pode abrir a versão para Mac aqui, e clicar no link correspondente aqui. No topo você vai ver a opção de download do R 3.0.3 para Windows e isto é exatamente o que você quer então basta clicar no link. E o download vai iniciar, e então, dependendo da  velocidade da sua conexão isto vai levar alguns minutos. 
+
+\paragraph{``}
+Ok, o download está finalizado.Ok, o download está finalizado. Vou clicar nesse ícone. 
+
+\paragraph{``}
+Você provavelmente terá que clicar em "Sim" (Yes) para isto.Você provavelmente terá que clicar em "Sim" (Yes) para isto. 
+
+\paragraph{``}
+E então você pode escolher seu idioma aqui. Há uma série de opções de traduções que você pode escolher. Eu vou escolher Inglês pois é o meu idioma. E então você pode seguir clicando no instalador, ele o guiará através das diversos etapas. E vamos fazê-lo agora para ver quais opções existem. Você clica em Próximo. Você deve aceitar a licença, que é GPL (General Public Licence), a Licença Pública GNU. Sinta-se à vontade para ler a licença e então clicar em "Avançar" (Next). 
+
+\paragraph{``}
+Geralmente o diretório padrão está ok. Então eu vou continuar seguindo com os passos. A opção "Usar a instalação padrão de usuário" está ok. Existem outros tipos de configurações de instalação que você pode escolher. Se você tem uma máquina de 32 bits se for uma máquina mais antiga, você pode clicar nela. Por padrão ele vai instalar as duas versões portanto você não precisa se preocupar com isto. Apenas clique em Próximo nesta opção. 
+
+\paragraph{``}
+E você pode escolher, mas basta usar todas as opções padrão ou você pode tentar personalizar a inicialização. Eu vou personalizar a inicialização para que você possa ver quais opções existem. Esta opção pergunta se você prefere uma interface do tipo MDI ou SDI. O que isto significa é se você quer que o R execute em uma janela grande com uma série de sub-janelas dentro da janela grande, ou se você quer rodar com janelas separadas Eu prefiro usar o modo SDI para que a console fique em uma janela e a janela de gráficos fique em uma janela separada. É apenas uma preferência pessoal eu acho mais prático e mais fácil de trabalhar assim Portanto vou escolher a opção SDI. 
+
+\paragraph{``}
+E então você pode escolher como você quer ver os seus arquivos de ajuda. A ajuda HTML é mais bonita e fácil de ler. E a ajuda em Texto é apenas texto puro. Talvez eu clique em Texto Puro apenas para ser diferente. 
+
+\paragraph{``}
+E você pode escolher se você quer um acesso à Internet padrão ou Internet2. Em geral você não deve mexer nesta opção, apenas clique em Próximo. 
+
+\paragraph{``}
+Você pode criar um atalho no menu Iniciar o que geralmente é uma boa ideia. E você pode escolher os padrões aqui em termos de criação de um ícone na Área de Trabalho a menos que a sua Área de Trabalho esteja muito cheia e você quer evitar isso. Portanto aqui estão, estes padrões estão ok, vamos clicar em Próximo. E então ele vai começar a instalar os arquivos no seu computador. 
+
+\paragraph{``}
+E agora está terminado. Nós podemos clicar aqui em Terminar. E você acabou de instalar o R no seu computador. Eu vou apenas fechar o navegador aqui. E eu vejo que agora tenho um  ícone na Área de Trabalho, eu vou dar um duplo-clique nele. E aqui estamos, já estamos rodando R. 
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Install \r{} on a Mac {Roger Peng}}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Neste vídeo, irei mostrar brevemente como instalar o R no Mac. É um processo bem simples Leva somente alguns passos A primeira coisa que você deve fazer é abrir o seu navegador e ir para o CRAN, Rede Compreensiva de Arquivos R. Você pode simplesmente digitar "cran" aqui e verá que há diversas opções para baixá-lo, para diferentes plataformas. Nós baixaremos para a plataforma Mac aqui. Então nós iremos baixar o R para o Mac. E você verá que a versão mais recente é a versão 3.0.3. Você deve fazer o download deste pacote aqui, então apenas clique sobre ele e você verá que a barra de download iniciará. Isto pode levar alguns minutos, dependendo da velocidade de conexão da sua internet, então apenas seja paciente [SEM SOM] Okay, então terminou o download. [SEM SOM] Eu apenas vou abrir aqui o pacote e você pode ver que ele iniciará o instalador. Ele o guiará por todas as etapas que você precisa para instalar o R 3.0.3. Eu clicarei aqui em "continuar" e isto é apenas a descrição do que será instalado. Clique "Continuar".
+
+\paragraph{``}
+O contrato de licença de software é a nova licença pública geral GNU versão 2. Você deve concordar com a licença, depois de tê-la lido, é claro. 
+
+\paragraph{``}
+E então, você pode clicar aqui em "Instalar", e talvez tenha que digitar sua senha de administrador. Vá em frente e digite. O programa começará então a instalar os arquivos no seu computador. [SEM SOM] Ilusões de Competência, a Importância de relembrar, Minitestes, e Cometendo Erros. Agora que terminou, eu posso clicar em "Fechar" e o programa estará então na minha pasta "Aplicações", Então eu posso ir para a minha pasta "Aplicações" que está bem aqui, em ordem alfabética. Eu apenas irei descer a tela até o R e aqui está. [SEM SOM] E aí está. Você instalou o R no seu computador. e agora pode ir adiante, usá-lo diretamente ou, se você quiser, pode instalar uma interface, como o R Studio.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Installing Rstudio {Roger Peng}}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+[SEM SOM] Neste vídeo, falarei sobre como instalar o RStudio para o Mac É um processo bem simples e envolve apenas alguns passos. A única coisa que vou lhe dizer é que você deve ter instalado o R antes de poder instalar o RStudio. Então, uma vez já instalado o R você pode ir ao website do RStudio, RStudio.com. Ilusões de Competência, a Importância de relembrar, Minitestes, e Cometendo Erros. E você pode ver aqui embaixo, no canto inferior esquerdo, que há um botão verde que lhe direciona ao download do RStudio. Aqui há duas versões do RStudio que você pode baixar. Uma é para desktop e a outra é para servidor, aqui abaixo. Agora, não vamos falar sobre a versão de servidor aqui Você deve baixar a versão de desktop clicando neste botão aqui. O website deve detectar automaticamente qual sistema operacional você está rodando o qual, no meu caso, é o Mac, e então é recomendado esta versão do Mac OS X. Apenas realizarei o download agora. E veremos a barra de download avançar. [SEM SOM] Uma vez finalizado o download, vá para a pasta "Downloads", e ele deve ser o primeiro da esquerda aqui e então clicaremos nele para instalá-lo.
+
+\paragraph{``}
+E então, como qualquer outro aplicativo no Mac, tudo que você tem que fazer para instalar é arrastá-lo para a pasta de Aplicações. Então, vou fazer isto agora.
+
+\paragraph{``}
+E está pronto.E está pronto. Agora, só é preciso ir na pasta de Aplicações aqui e encontrar o RStudio.
+
+\paragraph{``}
+Dê duplo-clique Escolha SIM, quero abrir esta aplicação.Escolha SIM, quero abrir esta aplicação.
+
+\paragraph{``}
+E lá vai. Você está rodando RStudio.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\subsection{Installing Outside Software on Mac (OS X Mavericks)}
+
+Segue, abaixo, legenda em idioma português brasileiro para o vídeo apresentado nesta aula:
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Uma das coisas que frequentemente pedimos para fazer neste curso é instalar software de vários lugares. Entretanto, se você usa OS X Mavericks vai notar que a instalação padrão tem algumas configurações de segurança que o impedem de instalar softwares pela internet. Isto tem o objetivo de lhe proteger contra a instalação de softwares maliciosos. Mas também irá impedi-lo de instalar coisas como RStudio e outros softwares Para mudar essas definições é bastante simples. Pode ir ao menu da Apple aqui. e clicar em System Preferences (Definições de Sistema). Vá para Security \& Privacy (Segurança e Privacidade) Por padrão você não será capaz de fazer quaisquer modificações  a não ser que entre com a senha de administrador. Vou clicar no cadeado aqui, escrever a minha senha e agora você pode ver que há várias opções para baixar e instalar aplicações. A opção mais segura é de apenas permitir aplicações da Mac App Store mas há muitas coisas que você precisará baixar para este curso que não estão na Mac App Store. Você precisa clicar no botão Anywhere (Qualquer Lugar) Que o deixará instalar softwares da internet ou de qualquer lugar. Você passa a ter a responsabilidade de se assegurar que o software é de confiança. Vai precisar deste passo para instalar coisas como RStudio, GitHub. e outros softwares. E assim é como você faz isso no Mac.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+
+%%%%%%%%%%
+\section{Semana 2}
+
+%%%%%%%%%%
+\subsection{Tips from Coursera Users - Optional Video}
+
+\begin{quotation}%
+\begin{small}
+{\large\textbf{``}}%
+Sou o lider de análise de jogos na Miniclip. Antes disso, eu era o lider de produção interino na divisão mobile na Miniclip, não de toda companhia. Eu fui mãe e dona de casa por 23 anos, cuidando dos meus trigêmeos biológicos, assim como de várias crianças acolhidas. Mas, como meus filhos estão ficando mais velhos, estou pensando em, talvez, voltar ao mercado de trabalho. Sou política e uma profissional de relações publicas, e por mais de 10 anos trabalhei fazendo lobby em Westminster, em Londres. Mas, ao mesmo tempo, sou uma dançarina artística e coreógrafa iniciante. 
+
+\paragraph{``}
+Porque é muito fácil inscrever-se em um curso e pensar, oh! Isso é muito bom, é realmente interessante e gostaria de aprender um pouco sobre isso. Mas, na verdade, isso exige alguma preparação, para ouvir uma palestra. Em outras palavras, é preciso de tempo disponível. Nunca há tempo suficiente. Se fosse um caminho fácil ou um caminho mais fácil, acho que não seria tão útil. É um pouco sobrecarregado para as pessoas da minha geração, porque não sei como configurar o microfone, e não tenho certeza se serei capaz de acessar todo o material e compreender os vídeos. 
+
+\paragraph{``}
+O fato de que as aulas estão em forma de vídeo é uma coisa muito útil  para alguém como eu, que há muito tempo não estuda, porque posso pausar repetidamente e voltar novamente se eu precisar. Eu faço as aulas quase religiosamente. Imprimo as apostilas. Faço anotações. E, então, crio meus apontamentos de forma organizada em um outro notebook. Bem, há um outro lado do Coursera que realmente aprecio, que é a revisão por pares. No começo, eu estava um pouco cética, e e também um pouco assustada, porque é uma carga de trabalho adicional no curso. Na verdade, isso se provou muito útil para o meu próprio curso, porque me ajudou a entender: quais os diferentes padrões? Qual é a melhor maneira de abordar algumas tarefas? E, depois de um tempo, você começa a perceber que há algo como um terreno comum. Assistentes, eles são realmente experientes. Eles ajudam muitas pessoas que tem algumas dificuldades, porque eles realmente não têm o conhecimento em codificação. Para mim, pelo menos, costumo começar por lugares que conheço 
+
+\paragraph{``}
+Rseek no caso de R ajuda bastante, mas no caso de outra linguagem de programação, eu provavelmente iria para o Stack Overflow. [MÚSICA] As coisas que estou fazendo agora, no meu trabalho, com o que eu aprendi é muito bom e foi uma grande experiência. Eu aprendi tanto que, de repente, me senti inteligente novamente [RISOS] Isso foi muito bom, Isso ativou partes do meu cérebro que eu não usava há um bom tempo. Só na minha casa somos três, e e todos fazemos pelo menos um curso no Coursera. Isso realmente mudou o que fazemos em nosso tempo.
+{\large\textbf{''}}
+\end{small}
+\end{quotation}
+
+Desafios comuns:
+\begin{nenumerate}
+\item Não existe tempo suficiente.
+\item Aulas são complicadas.
+\item A tecnologia pode ser intimidadora.
+\end{nenumerate}
+
+Estratégias para o sucesso:
+\begin{nenumerate}
+\item Rever os vídeos quando necessário.
+\item Agendar um tempo adequado todas as semanas.
+\item Manter comunicação com pares de estudo através de fóruns e de avaliações.
+\item Pedir ajuda nas comunidades ``TAs''.
+\end{nenumerate}
+
+Sugere-se pensar a respeito\ldots{}
+\begin{nenumerate}
+\item O que eu espero ganhar/obter com este curso?
+\item Quais os desafios eu consigo antecipar?
+\item Quais estratégias eu usarei a fim de sobrepujar estes desafios?
+\end{nenumerate}
+
+
+%%%%%%%%%%
+\subsection{Command Line Interface}
+
+Esta é uma introdução à interface de linha de comando. Interface de linha de comando é uma maneira de trabalhar com arquivos e pastas e que envolve digitar comandos ao invés de apontar e clicar com o mouse. Ela é incrivelmente útil para a ciência dos dados e será usada quando você estiver programando em R e estiver usando outras ferramentas da caixa de ferramentas do cientista de dados 
+
+O que é a interface de linha de comando? Quase todos os computadores que são enviados hoje vêm com alguma forma de interface de linha de comando. Para esta aula, a interface de linha de comando que nós usaremos, para Windows será o Git Bash e você o conhecerá melhor em "Introdução ao Git" e para Mac e Linux será o terminal. 
+
+O que a interface de linha de comando pode fazer? Você pode usá-la para navegar entre pastas, criar arquivos, pastas e programas  e realizar a edição dos mesmos. Por último, você pode usá-lo para executar programas de computador, o qual é um dos principais usos e nos divertiremos com isso na especialização de ciência dos dados. 
+
+Primeiramente, nós temos que entender o básico de diretórios Diretório é apenas um outro nome para pasta e é um nome comum que você ouvirá muito nestas aulas. Então, estar em um diretório e se mover a um diretório 
+
+Diretórios no seu computador são organizados como uma árvore Um diretório estará dentro de outro diretório e nós podemos navegar entre estes diretórios usando a interface de linha de comando Aqui está um exemplo: nós temos um diretório Música  e há três subdiretórios, um para cada compositor. Você pode imaginar que o diretório Debussy está dentro do diretório música e então nós podemos pensar sobre a estrutura deste diretório Pensamos em estar dentro de um diretório ou acima dele Um diretório acima de Debussy é o diretório Música Em geral, o diretório que está acima do diretório que você está pensando é o diretório que o contém. 
+
+A estrutura de diretórios no seu computador se parece com algo assim Você possui um tipo de estrutura de árvore onde cada diretório possui subdiretórios 
+
+Há alguns casos especiais que devem ser considerados Primeiramente, o diretório raiz Este é o diretório raiz no topo da árvore e ele está indicado no topo porque possui todos os outros diretórios. Normalmente, a abreviação para um novo diretório é uma barra uma barra indica um novo diretório 
+
+Outro diretório importante que você deve prestar atenção é o diretório inicial que está aqui em baixo. O diretório inicial é onde você começa quando se conecta ao seu computador e a maioria dos seus arquivos pessoais, músicas, fotos, funções R, todas estarão no seu diretório pessoal. 
+
+Novamente, esse seria um subdiretório do diretório raiz 
+
+Se você quiser navegar entre estes diretórios usando a interface de linha de comando, primeiro você deve ter uma interface de linha de comando Para usuários Windows você deve abrir o menu Start (Iniciar) procurar por Git Bash e então abrir a aplicação Git Bash. 
+
+Se for um usuário Mac, abra o Spotlight, procure por terminal e então abra a aplicação. 
+
+Quando você abrir o terminal ou o Git Bash verá que eles se parecem muito assim uma aplicação básica onde você vê principalmente espaço em branco O que você verá é chamado de prompt que é o seu nome de usuário Aqui, neste caso, é Sean seguido de um símbolo de dólar E então, quando você abrir a interface de linha de comando, você começará no seu diretório inicial. E então, quando você abrir a interface de linha de comando, você começará no seu diretório inicial. Um termo importante que nós usaremos muito é chamado de seu diretório de trabalho o qual é o diretório que você está neste momento então, quando você abre a interface de linha de comando, seu diretório de trabalho é seu diretório inicial. Se você mover para um subdiretório chamado Música então seu diretório de trabalho será Música Outra coisa para se ter em mente é o caminho As pessoas pensam sobre o caminho na estrutura de diretórios Nós estaremos nos movendo ao longo do caminho. Suponha que você está no seu diretório inicial, o qual é representado por um " ~ " Você pode querer saber quais são  os diretórios acima do seu diretório inicial. Então, o primeiro diretório que está acima é o diretório Usuários e o próximo é o diretório raiz Você pode imaginar que o caminho é o conjunto de diretórios  que você deve seguir para voltar ao diretório raiz 
+
+Se você digitar "pwd" quando estiver na interface de linha de comando, Aqui estamos no prompt Você pode ver o nome de usuário e o símbolo de dólar. Então, se você digitar "pwd" e teclar enter, o que você verá é o caminho. Este é o caminho para o diretório de trabalho no qual você está agora Neste caso, você está no diretório raiz, usuários e então, abaixo, em Sean. Este é o caminho para o diretório de trabalho no qual você está. pwd significa Print Working Directory (Imprimir Diretório de Trabalho). 
+
+Se você usar pwd, você pode usá-lo a qualquer hora e qualquer diretório e ele sempre imprimirá o diretório que você está, no qual está olhando agora. 
+
+Sempre há uma receita para usar a interface de linha de comando Você sempre usará o que é chamado de comando No caso anterior, o comando era chamado de pwd E então, você usará o que é chamado de "flags" São como parâmetros ou coisas que você passa ao comando para lhe indicar qual tipo de comportamento a ser executado. E então os argumentos podem ser o que os comandos irão modificar por exemplo, arquivos que serão olhados e coisas assim. 
+
+Dependendo do comando, você precisará ou não usar flags ou argumentos. Por exemplo, quando você estava usando pwd, ele era um comando e não precisou de qualquer tipo de opção, flags ou argumentos para mudar o que acontecería 
+
+Novamente, nós podemos usar o comando pwd para imprimir o diretório de trabalho atual. Se eu for um usuário diferente e ir para o meu diretório inicial e digitar pwd, eu obterei um caminho diferente. Seu caminho será usuários seguido por Jeff porque agora eu sou um usuário diferente e então eu possuo um outro diretório de trabalho atual.
+
+"clear" (limpar) limpará todos os comandos na sua interface de linha de comando atual Por exemplo, imagine que você digitou diversos comandos. Neste caso, nós digitamos pwd e temos algo aqui em usuários Jeff e não queremos mais que isso bagunce o espaço da nossa interface. O que nós podemos fazer é digitar a palavra "clear" e isso limpará tudo na interface de linha de comando e só lhe restará o prompt no topo da tela novamente. 
+
+Um comando muito importante é "ls" ls lista os arquivos e pastas no seu diretório atual. Por exemplo, se você digitar ls no diretório Jeff, você obterá todas as subpastas. Por exemplo, você obterá a Área de Trabalho, Fotos e Música. Por último "ls -a" lista os arquivos ocultos e visíveis. Por exemplo, Área de Trabalho, Fotos e Música estavam todos visíveis mas há estes arquivos .Trash e no Mac há os arquivos .DS\_Store Estes arquivos começam com um ponto e portanto estão ocultos quando você digita ls. Eles também estarão ocultos se você olhar na estrutura de pastas no seu computador mas "ls -a" mostra estas pastas "ls -al" mostra alguns detalhes destas pastas 
+
+Por exemplo, lista informações sobre o tamanho das pastas e coisas assim. 
+
+Uma nota importante é que ambos "-a" e "-l" são flags então são precedidos por um traço. Flags normalmente são precedidos por um traço. Você pode combiná-las em uma flag apenas concatenando-as depois do traço "cd" é outro comando e significa Change Directory (Mudar de Diretório) Ele recebe como argumento o diretório que você quer visitar. Se você estiver num diretório particular e quiser mudar para outro diretório você pode enviar para o comando cd um caminho específico e ele o levará para esse diretório. Se você digitar cd sem nenhum argumento ele o levará direto para o diretório inicial.
+
+Um comando importante é se você digitar "cd .." assim ele o levará um nível acima dos diretórios digitando-se "cd ..". Por exemplo, se eu estou no meu diretório inicial e digitar "cd Music/Debussy" e imprimir para qual diretório eu fui Eu terei me movido para esse subdiretório usando o comando cd 
+
+E então, se eu quiser mover para um nível acima nos meus diretório, para a pasta Música o que eu poderia fazer é digitar "cd .." e o que aconteceria é que eu moveria um diretório acima. Se eu imprimir o diretório de trabalho agora, eu terei me mudado para o diretório Música. 
+
+Se eu apenas digitar "cd" e não digitar mais nada depois disso o que acontece é que eu acabo voltando para o diretório inicial. 
+
+"mkdir" significa Make Directory (Criar Diretório). Ele faz basicamente o que você faria se desse clique com botão direito e "Criar Nova Pasta" O que você precisa fazer é dar o argumento que será o nome do diretório que estará criando Por exemplo, suponha que estou novamente aqui no meu diretório inicial, Jeff e eu digito "mkdir documents" O que isso fará é criar uma nova pasta chamada documents Então, se eu digitar ls, que exibe todos os diretórios visíveis um dos diretórios será documents que eu acabei de criar com o comando mkdir. Agora eu posso entrar  neste diretório e então imprimir o meu diretório de trabalho. Você verá que agora eu mudei para este novo diretório que eu criei com mkdir 
+
+"touch" cria um novo arquivo vazio Então, se eu digitar aqui "touch test\_file", o que acontecerá é que será criado um arquivo chamado test\_file. E então, se eu listar tudo que está no meu diretório inicial você verá agora que um dos arquivos listados é o test\_file Novamente, se você precisar criar um arquivo use touch. 
+
+"cp" significa Copy (Copiar). Suponha que você queira pegar um arquivo e copiá-lo para outro arquivo O que você faz é passar ao comando cp dois argumentos primeiro é o arquivo que você quer copiar e depois o local de destino para onde você quer copiá-lo Por exemplo, se eu digitar "cp" e então o arquivo teste que eu criei e então um diretório "documents" (documentos) O que acontecerá é que ele pegará o arquivo test\_file e o copiará para o diretório documents. 
+
+E então, se eu copiar esse arquivo e então entrar no diretório documentos, digitando "cd documents" e listar os arquivos, verei que um dos arquivos que está nesse diretório é o test\_file. Você pode então digitar "cd .." para voltar ao seu diretório inicial.
+
+cp pode ser usado também para copiar o conteúdo de diretórios. 
+
+Suponha que você quer mover um diretório para outro. Você pode usar o mesmo comando mas precisa da flag "-r" A flag "-r" indica recursivo Então, se você tem o comando "cp -r" que é o comando "cp" com uma flag "-r", e então "documents" para "more\_documents". isto copiará o diretório documents inteiro para um novo diretório chamado more\_documents. Por exemplo, o que nós podemos fazer aqui é que podemos usar mkdir para criar o more\_docs E assim, podemos usar  o comando "cp -r" para mover documents para more\_docs 
+
+E então, se nós entrarmos em more\_docs usando comando cd e ls para listar tudo o que está no diretório, veremos que há um test\_file naquele diretório porque ele foi copiado para cá.
+
+rm significa Remove (Remover). é similar com apagar Você o usa para apagar arquivos que não quer mais Por exemplo, se nós listarmos os arquivos no diretório inicial, nós teremos todos estes arquivos que criamos. Suponha que queremos remover este test\_file. Então eu digito "rm test\_file" e ele será removido. Se eu listar os arquivos novamente, verá que o test\_file não estará mais aqui 
+
+Você pode usar rm para remover um diretório completamente com seu conteúdo usando a flag "-r" Em outras palavras, você pode recursivamente remover todos os arquivos de um diretório. Entretanto, você deve ter cuidado quando fazer isso porque não uma opção desfazer. Então, se você apagar, será para sempre. Então tenha muito cuidado quando estiver usando "rm -r" Se eu usar o comando "rm -r more\_docs" no meu diretório inicial ele deletará o diretório more\_docs e todos os arquivos que estão dentro dele Novamente, se eu usar o ls agora depois do que foi feito, tudo em more\_docs foi deletado "mv" significa mova (mover). Com esse comando você pode mover arquivos entre diretórios Suponha que eu criei este new\_file com touch então eu crio este arquivo. Então suponha que eu quero movê-lo  para documentos. Eu digitaria "mv", espaço, o nome do arquivo "new\_file" e então o diretório que eu quero mover o arquivo, documentos. O que aconteceria se eu digitasse ls agora seria que não haveria um arquivo no diretório principal mas, se eu usasse cd e entrasse no diretório documentos e listasse tudo o que está ali e veria que eu movi o new\_file para esse diretório 
+
+Você também pode usar mv para renomear arquivos Se você mover um arquivo para outro com um novo nome, ele apenas mudará de nome Por exemplo, aqui eu listo os arquivos do diretório que eu estou e há dois arquivos. test\_file e new\_file e eu quero mudar o nome do arquivo new\_file eu posso digitar "mv new\_file" este é o nome do arquivo que eu tinha previamente e eu quero renomeá-lo de renamed\_file Então eu mudo o nome deste arquivo para renamed\_file. Então eu listo todos os arquivos que existem, e há o test\_file e o renamed\_file, o qual possui o conteúdo que estava previamente em new\_file. "echo" imprimirá qualquer argumento que você fornecer por exemplo, se você digitar "echo hello world" desta maneira, o que acontecerá é que será imprimido "hello world" echo é muito importante para imprimir os conteúdos de variáveis específicas que foram armazenadas, sobre as quais falaremos depois. 
+
+"date" (Data) imprimirá a data Então, se eu digitar "date", você obterá a data como esta, neste caso, que é data na qual os slides foram criados. Em resumo, os comandos são pwd, que imprime o diretório de trabalho. Lhe diz em qual diretório você está "clear", o qual limpa a tela. "ls", o qual lista os arquivos no diretório de trabalho atual "cd" o qual o permite mudar de diretórios de trabalho. "mkdir", o qual cria um novo diretório. "touch", o que cria um novo arquivo. "cp", o qual copia um arquivo, "rm", o qual remove um arquivo ou um diretório se você usar com a flag "-r" "mv" é um comando para mover ou renomear um arquivo e "date" e "echo" são maneiras para olhar a data ou imprimir um comando particular
+
+
+%%%%%%%%%%
+\subsection{Introdution to Git}
+
+Esta é uma breve introdução ao Sistema de Controle de Versão do Git. 
+
+Controle de Versão é um sistema que registra todas as alterações que você fez ao longo do tempo em um arquivo ou conjunto de arquivos permitindo recuperar depois uma versão específica. É uma das ferramentas mais usadas por cientistas de dados porque quase sempre você trabalhará com um conjunto de scripts ou um conjunto de programas e os modificará no decorrer do tempo, algumas mudanças serão boas e outras serão ruins. E talvez outras pessoas estarão trabalhando ao mesmo tempo em um conjunto similar de funções que você deseja acompanhar em tudo o que acontece com estes arquivos. 
+
+Então, muitas das maneiras com as quais trabalhamos com arquivos, se criamos algo, o salvamos, o alteramos e salvamos novamente, o que acontece é que você perde os arquivos intermediários, os arquivos que salvou entre a versão final e a primeira versão. E aí, Controle de Versão significa justamente que vamos tentar salvar e gerenciar todos estes arquivos intermediários. E é muito importante para quando você colaborar com outros porque eles podem estar usando um arquivo intermediário diferente e você pode querer saber como coordenar o que aconteceu quando você o pegou para versão final. 
+
+Git é um sistema de controle de versão grátis e e de código aberto. Ele é distribuído, então pode lidar com qualquer coisa  desde projetos pequenos até muito grandes com velocidade e eficiência. É um dos sistemas de controle de versões mais usados hoje em dia. 
+
+Foi criado pelo mesmo pessoal que desenvolveu o Linux. É definitivamente hoje o controle de versão mais popular se comparado com todos os outros sistemas de controle de versão como o SVN. 
+
+Tudo é armazenado em repositórios locais, ou no seu computador, e são chamados de "repos" (repositórios) e aí você faz a maioria das operações na linha de comando. Este é o link que eu lhes passei aqui é uma pequena história de como o git foi desenvolvido e como começar 
+
+A primeira coisa que você deve fazer é baixar o Git Passei o website que você pode ver bem aqui. Se você for a esse website e baixar a versão apropriada do software para o seu sistema operacional, será um bom começo 
+
+Depois, uma vez  terminado o download, abra-o e comece o processo de instalação, haverá um ajudante de instalação que o levará pelas etapas de instalação do Git 
+
+A não ser que você realmente saiba o que está fazendo, você deve optar por todas as opções padrões a cada etapa do processo de instalação 
+
+Uma vez terminada a instalação, você pode clicar no botão Finish (Terminar), embora queira antes desselecionar a caixa para revisar as notas de lançamento porque, provavelmente, você não estará interessado nisso neste ponto 
+
+A primeira coisa que você irá fazer é abrir o programa chamado Git Bash, que é o ambiente de linha de comando para interagir com o Git Isto é verdade se você for um usuário Windows. Você estará localizado no diretório no qual o Git foi instalado ou, para usuários Windows, estará no menu iniciar. [SEM SOM] Uma vez aberto o Git Bash, você verá uma breve mensagem de boas vindas seguido pelo nome do seu computador e um sinal de dólar na próxima linha 
+
+O sinal de dólar significa, novamente, o prompt, como você viu na aula de interface de linha de comando e indica sua vez de entrar com um comando 
+
+Cada vinculação ao repositório Git será rotulado com o nome do usuário da pessoa que realizou a operação 
+
+Então, o que você precisa fazer para configurar as coisas é entrar com o seu nome de usuário e email Você digita estes comandos "git config --global user.name" e aqui você digita seu nome de usuário que você usará e aqui a mesma coisa, somente que "user.email" aqui você entrará com o seu email que você usará juntamente com o GitHub Você tem que fazer isso apenas uma vez quando o sistema inicializa pela primeira vez mas você pode sempre mudar depois usando os mesmo comandos. Se, por exemplo,  você quiser mudar seu nome de usuário ou email que estiver associado com a sua conta Git 
+
+Digite os seguintes comandos para confirmar as mudanças O que você digitará é "git config --list" como você pode ver aqui E assim você será capaz de ver seu nome de usuário, email e tudo mais. [SEM SOM] Agora, apenas sairemos do Git Bash Você pode fazer isso com este comando, digite "exit" e tecle enter Agora que o Git está configurado no seu computador faremos algumas aulas em como usar o GitHub, o qual é uma ferramenta de desenvolvimento web para lidar com o Git e que é amplamente utilizada entre cientistas e faz muitas coisas agradáveis Uma vez tudo configurado e rodando nós lhe mostraremos como fazer as coisas mais importantes com o Sistema de Controle de Versão
+
+
+\paragraph{Resumo:}
+A interface do Git para qualquer sistema operacional poderá ser baixada a partir do \link{}:
+
+\url{https://git-scm.com/download}
+
+No terminal (para o Windows, usa-se o Git Bash), a configuração de uma conta é feita a partir dos comandos:
+
+\begin{verbatim}
+# Para configurar nome de usuário.
+$ git config --global user.name "<eu nome aqui>"
+
+# Para configurar um endereço de e-mail.
+$ git config --global user.email "<email@exemplo.com>"
+
+# Para verificar o resultado das alterações na configuração.
+$ git config --list
+\end{verbatim}
+
+
+%%%%%%%%%%
+\subsection{Introdution to Github}
+
+Esta é uma introdução bem breve ao GitHub. Git é um software de controle de versão que te permite controlar e gerenciar as revisões de projetos nas quais você está trabalhando localmente no seu computador. E, como tal, é por si só um software bastante útil. Mas o GitHub é um website mais recente que foi desenvolvido, e que te permite colaborar em projetos em uma escala maior. E é aí que o poder do Git entra em cena. GitHub é um serviço de hospedagem na internet para desenvolvimento de softwares, que usa o controle de revisão do Git como um tipo de força motriz. Então o que ele lhe permite fazer é contribuir para projetos online e ter seus projetos divulgados online de forma que outras pessoas possam vê-los e contribuir com eles também. Então, basicamente, o que ele faz é permitir aos usuários enviar e extrair informações  de seus repositórios locais, para que coisas que você tenha em controle de versão do git, no seu computador local, sejam enviados e obtidos de repositórios remotos que estão na web. Ele também fornece aos usuários uma página inicial que lhes mostra todos os seus repositórios. E todos os repositórios que você tem no GitHub são um cópia de segurança no servidor, caso algo aconteça às suas cópias locais. Mas o aspecto chave do GitHub é o aspecto social, que permite que os usuários se sigam, compartilhem projetos e contribuam com os projetos uns dos outros, o que é realmente o poder do GitHub. Uma das coisas que percebemos sobre o GitHub é que, geralmente, quando você vê o trabalho de outra pessoa você, pode aprender sobre o que ela está trabalhando, como o código funciona, o que é uma ótima forma de identificar pessoas com as quais seria bom trabalhar. E também descobrimos que, quando colocamos projetos na internet, outras pessoas geralmente contribuem, de graça, só porque elas estão interessadas em tornar o software melhor. Então, a primeira coisa que você precisa fazer, é criar uma conta no GitHub, agora que você instalou o Git. Você precisará de um nome de usuário, email, senha, e clicar em "Sign up for GitHub" (Cadastrar-se no GitHub). Um detalhe importante aqui é que você deve usar o mesmo email que usou quando se cadastrou no Git, na aula anterior, para que você possa ter os dois softwares trabalhando juntos. 
+
+Na próxima tela você vai clicar em ``Free Plan" (Plano sem Custos), e depois clicar em "Finish Sign Up" (Terminar Cadastro). Assim você estará cadastrado com uma conta no GitHub. Ter uma conta no GitHub é um requisito desta aula. 
+
+É grátis, então não é, ou não deve ser, um problema. Depois de se cadastrar, você será levado para esta página, a qual possui vários recursos úteis para se aprender sobre o Git e o GitHub. Sugiro que você leia estes tutoriais, já que eles são mais detalhados do que o que conseguiremos cobrir nesta aula, e eles são incrivelmente úteis. 
+
+Se você clicar aqui no seu nome de usuário, no canto superior direito, você poderá ver seu perfil no GitHub. Pode ver todos os projetos que você tem atualmente, os quais, quando você começar a utilizar o software, não serão muitos. 
+
+Seu perfil vai mostrar toda sua atividade no GitHub. Vai também mostrar à outras pessoas quem você é e no que está trabalhando. Então você pode preencher informações sobre os tipos de projetos nos quais você se interessa. 
+
+Nosso plano pra este curso é usar este perfil no GitHub como o local onde você pode construir um perfil O qual será um portfólio do trabalho que você desenvolveu e que mostra suas habilidades como um cientista de dados. 
+
+Se você clicar em "Edit your profile" (Editar o seu perfil), na parte direita da tela,  você pode adicionar informações básicas sobre si. É totalmente opcional, de forma que você não precisa fazer isso se não quiser. Mas se você estiver fazendo um bom trabalho, por exemplo,  se no curso desta aula você criar produtos e ideias interessantes sobre a ciência dos dados, você vai querer ter a possibilidade de levar crédito por isso. Na próxima aula, vamos lhe mostrar como você pode criar um repositório e fazer o upload dele no GitHub. Enquanto isso, explore a documentação no site do GitHub, porque ela lhe dará muitas informações diferentes. Isso vai te ajudar quando você estiver fazendo controle de versão e quando estiver trabalhando com o GitHub. 
+
+
+%%%%%%%%%%
+\subsection{Creating a Github Repository}
+
+Nesta aula iremos aprender uma das coisas fundamentais que você pode fazer com o GitHub, que é criar um repositório, ou repo. Para recapitular ou refrescar a sua memória, temos dois softwares dos quais falamos. O Git é um software que lhe permite fazer um controle de versão de documentos, no seu próprio computador. E o GitHub é um software que lhe permite, ou melhor, é um serviço web, que lhe permite trabalhar com repositórios localizados remotamente, na web. 
+
+Assim, o GitHub lhe permite compartilhar o seu repositório com outras pessoas, acessar outros repositórios públicos e guardar cópias dos repositórios do seu próprio computador no servidor, para que, no caso de algo acontecer à sua versão local, você tenha uma cópia de segurança. 
+
+Existem diversas formas diferentes de criar um repositório no GitHub. Uma é começar um repositório do zero, isto é, criar o seu próprio repositório. Outra é bifurcar o repositório de outro usuário. Vamos começar com o primeiro método, que é o da criação do seu próprio repositório, e depois falaremos um pouco acerca de como fazer uma bifurcação ou obter informação de outro usuário e começar a trabalhar no projeto dele. O ponto chave que deve ser lembrado é que, quando as pessoas falam de repositórios, é costume abreviá-lo para repo. 
+
+Então o que você pode fazer é, ou ir para a sua página de perfil, que vai ser github.com seguido do seu nome de usuário. E clicar para criar um novo repositório, no canto superior direito da página, ou então você pode ir diretamente ao github.com/new. Você terá que fazer o seu login em sua conta do GitHub se quiser esta segunda opção, 
+
+A primeira coisa que você precisa fazer é de criar um nome para o seu repositório, e escrever uma pequena descrição. Uma boa ideia é criar um nome para o seu repositório que seja localizável pelo Google, se você quiser compartilhá-lo com outras pessoas. E fazer uma descrição que seja clara e elucidativa  do que você vai tentar fazer com todos os arquivos daquela pasta. 
+
+Depois o que você pode fazer é selecionar um repositório público ou privado. Por padrão, os repositórios são públicos, são gratuitos e podem ser compartilhados com qualquer outra pessoa. Repositórios privados geralmente requerem uma conta paga, mas se você pertence a uma instituição educacional, pode normalmente pedir até cinco repositórios privados. Clique na caixa de inicializar este repositório com um arquivo README e clique no botão Criar Repositório na parte de baixo.  
+
+Depois de fazer isto, você terá criado o seu primeiro repositório GitHub. Você pode ver agora que este arquivo é um repositório de Nick Carchetti. 
+
+E pode ver também que tem um documento README. pelo fato de termos inicializado este repositório com um arquivo README. Se você inicializar o arquivo README, o que você irá observar primeiro é o conteúdo do arquivo README. E falaremos um pouco mais acerca de como você pode utilizar Markdown para criar uma espécie de arquivo README que torne o seu repositório mais fácil de entender. 
+
+Agora você pode criar uma cópia deste repositório no seu computador, para poder fazer alterações nele.  Então você pode abrir o Git Bash e criar um diretório no seu computador, onde você irá armazenar a cópia do seu repositório. Por exemplo, você pode escrever mkdir e então, aqui no seu diretório padrão, criar um repositório teste, e depois navegar para esta pasta usando o comando cd. 
+
+E depois o que você pode fazer é inicializar um repositório git local, utilizando o comando "git init", se você instalou o git conforme falamos anteriormente nas nossas aulas sobre o Git, e depois você pode conectar o seu repositório local ao repositório remoto. Isto é, você pode ligar o seu repositório local com o repositório remoto no GitHub, teclando "git remote add origin", seguido da URL do repositório remoto que você criou no GitHub. Assim, você ligou a sua cópia local com a sua versão remota no GitHub.  
+
+O que você pode fazer é, veja como é na prática. Aqui Nick cria um repositório, depois entra na pasta deste repositório, e depois o liga à versão remota desse mesmo repositório. Portanto, outra coisa que você pode fazer é bifurcar o repositório de outro usuário. A ideia por trás disto é que você quer ser capaz de desenvolver software com outras pessoas. Estas outras pessoas já terão repositórios que foram criados no GitHub. Uma vez que você encontra um repositório em que esteja interessado, você pode ir a esse repositório e clicar no botão de bifurcação, e o que esse botão de bifurcar vai fazer é criar uma cópia desse repositório, tal como está, no seu perfil do GitHub. E então agora você tem esse repositório na sua conta do GitHub. E a partir daí você pode fazer uma cópia local, isto é, fazer um clone desse repositório no seu computador usando o comando "git clone", e isso vai pegar a versão do seu repositório remoto e a clonará para o seu computador. Se você usar o comando dessa forma, será clonado para o seu diretório atual. E então o que você pode fazer é trabalhar nesta versão e tentar contribuir de volta para esse repositório, esperando que as alterações que você fez passem a ser utilizadas. 
+
+Se você fez alterações na sua cópia local, você vai querer mandar essas alterações para o GitHub. É possível que você queira se manter atualizado em relação às alterações usando a sua cópia bifurcada. Nós iremos falar um pouco mais sobre o Git e o básico do GitHub nas próximas aulas, mas realmente o melhor local para encontrar essas informações é procurar nesses tutoriais aqui, tanto no GitHub como no website do Git, os quais lhe darão muitas informações sobre bifurcar e clonar, e de todos os outros componentes de utilização do GitHub. 
+
+
+%%%%%%%%%%
+\subsection{Basic Git Commands}
+
+Esta aula será sobre os comandos básicos do Git e do GitHub, que você irá utilizar para os arquivos que você irá criar nesta classe. 
+
+A primeira coisa que devemos fazer é olhar para a estrutura onde os diferentes arquivos se encontram e o que os diferentes comandos fazem. Você pode começar olhando aqui, na área de trabalho na qual você está de fato trabalhando com os arquivos no seu computador, isso é como os diretórios onde você trabalha com os seus arquivos. Depois há um índice. Ele indica ao Git quais arquivos ele deverá manter sob controle de versão. E temos também o repositório local. Estes são os arquivos armazenados ou que têm controle de versão no seu computador local. Por fim, há o repositório remoto. No nosso caso, será sempre o GitHub. A ideia aqui é que você começa no seu espaço de trabalho e cria um arquivo. E a primeira coisa que precisa fazer é adicionar esse arquivo ao índice, para que o Git saiba que deve monitorar esse arquivo e acompanhar todas as suas alterações. E depois o que você precisa fazer é efetivar esse arquivo. Para isso é preciso colocar uma versão desse arquivo no seu repositório local, para que seja armazenado e atualizado. Assim, à medida que fizer alterações, você vai efetivando essas alterações no seu repositório local. 
+
+Por fim, a certa altura, quando já tiver feito algumas efetivações e quiser atualizar o repositório remoto, o que você irá fazer é executar um comando "push", para colocar as alterações nos arquivos no seu repositório remoto. A primeira coisa que você precisa fazer é: imagine que você está trabalhando numa pasta, a qual é um repositório que está sob o controle de versão do Git. A primeira coisa que você vai querer fazer é colocar arquivos novos sob controle de versão, e o que precisa fazer é adicioná-los ao índice. Para que o Git saiba que esses arquivos precisam ser rastreados, você pode usar o comando "add", este é o "git add .", ele adiciona todos os novos arquivos da área de trabalho na qual você está trabalhando, isto é, presumindo que você esteja na pasta na qual está adicionando arquivos novos. 
+
+O comando "git add -u" irá atualizar o que acontecer aos arquivos cujos nomes foram alterados ou que foram apagados. Assim o "git add ." apenas adicionará os novos arquivos, enquanto o "git add -u" lida com todas as mudanças nos arquivos, seja adicionar, apagar ou qualquer alteração no nome. E o "git add -A" executa ambas as operações num só comando. Assim, antes de efetivar algo no seu repositório local, você precisa garantir o uso do comando add, para poder adicionar algo ao índice. 
+
+Assim que os tiver adicionado ao índice, você poderá efetivá-los no seu repositório local. Assim a forma como você faz isso é usando o comando "git commit", seguido de "-m" e de uma mensagem. A mensagem deverá ser uma descrição útil das alterações que vão aparecer com este comando. Assim, se eu adicionei alguns arquivos novos, a mensagem poderá dizer que eu tenho os seguintes novos arquivos. Ou poderá indicar algo sobre as coisas que você apagou ou alterou, para que possa alterar o seu repositório local. 
+
+Isto fará alterações apenas no repositório local, não fará qualquer alteração no GitHub, é apenas uma ação local. 
+
+Se você quiser então colocar os arquivos no GitHub, o que você pode fazer é, mantendo-se sempre na mesma pasta de trabalho, digitar o comando "git push". O que esse comando fará é pegar todas as alterações que tiverem sido efetivadas, até aquela altura, e submetê-las para o diretório remoto no GitHub. 
+
+Às vezes você poderá estar trabalhando num projeto, em particular nesta classe, onde há uma versão que poderá ser utilizada por outras pessoas, e você talvez não queira editar a versão que está sendo utilizada por todos os outros, porque se fizer muitas alterações, poderá quebrar todo o trabalho que outros estejam fazendo.  Nesse caso, o que pode ser feito antes é criar um ramo. Um ramo é apenas uma outra versão do mesmo diretório, na qual você poderá fazer alterações como que independentemente. Para isso você pode usar "git checkout -b" seguido do nome do ramo que você quer criar, e isso criará o novo ramo. Por padrão, o ramo para todos os repositórios que são criados com o GitHub é o ramo "master", mas você poderá criar um repositório qualquer com outro nome que seja usado para o ramo de desenvolvimento. Para verificar em qual ramo você está, a qualquer momento, se você for para a diretório de trabalho atual, onde está o repositório, e digitar "git branch", o comando indicará o ramo em que você está. Se quiser voltar para o ramo mestre, o que pode fazer é digitar "git checkout master" e isso o fará voltar para o ramo mestre. E assim você pode olhar para esse ramo. 
+
+Uma coisa que você pode fazer,  depois de ter feito um "push" das alterações para o seu repositório. Imagine que você está trabalhando num repositório, num ramo diferente, ou está trabalhando num repositório que bifurcou de outra pessoa. O que você pode querer fazer é fundir as suas alterações ao repositório inicial ou ao ramo inicial no qual estava trabalhando. Para fazer isso você precisa fazer um pedido de "pull request". Esta é uma funcionalidade única do GitHub. Não é uma funcionalidade do Git. Você vai então à página do GitHub e, se selecionar o ramo em que está interessado, se selecionar o ramo em que esteve trabalhando, então você pode clicar neste botão aqui, o qual faz um pedido "compare and pull" E o que ele irá fazer é emitir um "pull request" à pessoa a quem pertence esse ramo ou repositório. Se for você mesmo, irá receber um aviso de que recebeu um "pull request". Se for de outra pessoa, então ela receberá o aviso. Depois eles podem decidir fundir esse pedido em seu repositório ou não, dependendo das alterações serem apropriadas. Assim, você poderá ver todas as alterações que foram efetuadas, e confirmar se eram apropriadas e interessantes ou não. 
+
+Portanto, eu estou lhe dando o básico do básico dos comandos do GitHub, mas existem muitos outros. Você pode encontrar pequenos truques e dificuldades com o Git e o GitHub. Portanto, o melhor lugar para começar é a ajuda do GitHub. Mas a documentação do Git é bastante completa, exige um pouco mais de leitura e de prática. Contudo, a minha experiência indica que o melhor lugar para lidar com isso é digitar o que você pensa que quer no Google ou no Stack Overflow, e você encontrará respostas mais rapidamente, na minha opinião. 
+
+
+%%%%%%%%%%
+\subsection{Basic Markdown}
+
+Esta é uma aula sobre o básico de markdown. Markdown é apenas um arquivo texto que é formatado de um jeito muito simples e específico, tal que sites como GitHub e também R e R Studio podem reconhecer e pode ser usado para fazer um monte de coisas diferentes. Você aprenderá bastante sobre markdown nos próximos cursos, por exemplo, no curso de pesquisa reprodutível. Mas, para a proposta de estar apto para lidar com GitHub, também irei passar o básico de markdown. 
+
+A primeira coisa que você precisa saber é que o markdown é apenas um arquivo texto que você está editando. E a extensão para este arquivo texto é .md Você vai criar um arquivo, por exemplo, readme.md, um arquivo markdown. A primeira coisa que você vai fazer é criar cabeçalhos. Por exemplo, se você colocar cerquilha dupla dessa maneira, seguido de algum texto, criará um cabeçalho de segundo nível. O que acontecerá se você subir o arquivo.md, por exemplo, para o GitHub, se você usar cerquilha dupla e então um texto em seguida? Você verá que ele será interpretado pelo GitHub como um cabeçalho. Um pouco maior e com negrito. Você também pode criar cabeçalhos menores, usando a cerquilha tripla para isso. E então digitar o texto do cabeçalho de terceiro nível. E você verá que o GitHub interpreta isto como um título de tamanho um pouco menor. 
+
+Outra coisa que você pode fazer, também com Markdown, além de digitar textos simples, é a criação de listas de um jeito bem fácil. Por exemplo, se você digitar um asterisco, e então digitar  o primeiro item da lista, asterisco, segundo item e assim por diante, você vai obter uma lista não ordenada, ou seja, uma lista com pontos, começando no início, bem formatada pelo GitHub. 
+
+Estas são as duas coisas básicas que você precisa saber agora. Você pode usar cabeçalhos e listas para organizar seu arquivo. E então apenas digitar parágrafos simples também. Se você quiser aprender mais sobre markdown, você pode tentar este link aqui ou, após instalar o RStudio, você pode clicar no botão, há um botão MD bem no meio da tela que, se você clicar nele, você verá um guia rápido de markdown. Você não precisará do R Markdown ou qualquer outro detalhe técnico, até você chegar em pesquisa reprodutível, mas isto será muito útil, no geral, para enriquecer seus primeiros diretórios no GitHub. 
+
+
+%%%%%%%%%%
+\subsection{Installing R Packages}
+
+Esta aula é sobre a instalação de pacotes R.
+
+Quando você baixa o R a partir do Comprehensive R Archive Network (CRAN), você obtém a base do sistema R. E isto inclui diversas funções que você pode usar para sumarizar dados, fazer gráficos e coisas assim. Ele basicamente cobre a funcionalidade básica que você precisará incluir implementando a linguagem R. Mas a realidade é que R é tão útil que há um monte  de pacotes adicionais que estende esta funcionalidade básica em diversas direções. Tudo desde a limpeza de dados, sua exibição, análise dos dados e construção de aplicações interativas. Pacotes R são desenvolvidos e publicados por uma grande comunidade R, e esperamos que isso inclua você ao final deste curso 
+
+Para obter pacotes R você irá, inicialmente, ao CRAN. Mas para algumas aplicações biológicas e algumas aplicações big data, poderia também ir ao Projeto Bioconductor, cujos websites eu referenciei nos links aqui. 
+
+Você pode também obter informações sobre a disponibilidade de pacotes no CRAN com a função available.packages(). E então o que você deve fazer é entrar no R, iniciá-lo, e você entrará no prompt para digitar este comando: "a <-" e então dar como argumento o "available.packages()", desse jeito. Isso resultará em um grande número de pacotes. Então você pode digitar "a" e então enter e você verá todos os pacotes, o que neste caso seriam milhares Ao invés disso, você pode usar o comando "head" para olhar a um determinado número digamos, três desses pacotes, os três primeiros em ordem alfabética 
+
+No momento de criação desta aula, haviam aproximadamente 5200 pacotes no CRAN cobrindo uma vasta variedade de tópicos 
+
+e um número igualmente grande de pacotes disponíveis no Bioconductor 
+
+Uma coisa que você pode fazer é, se você sabe a área na qual você está trabalhando mas não sabe quais pacotes R quer, você pode ir ao link "Task Views", o qual agrupa diversos pacotes R que são relacionados a um tópico específico 
+
+Para instalar um pacote R, você usa principalmente a função "install.packages" O que você pode fazer é usar a função com o nome do pacote como argumento Por exemplo, se você quiser instalar o pacote Slidify o que eu faria seria digitar "install.packages" e então entre aspas "slidify" e o que isso faria é que o programa iria ao CRAN e instalaria este pacote no seu computador Qualquer pacote cujo o pacote principal dependa também serão baixados e instalados Esta é uma das melhores partes do R, é relativamente direto instalar novos pacotes 
+
+Você também pode instalar múltiplos pacotes R com uma única linha. O que você faria seria, novamente, digitar "install.packages" e o que você faria seria agrupar em parênteses, com um "c" no início todos os diferentes pacotes separados por vírgulas e cercados por aspas. E então, o que isso faria é que instalaria os pacotes slidify, ggplot2 e devtools 
+
+Você também pode instalar pacotes de maneira bem direta no RStudio. Espero que você tenha instalado R no RStudio Você pode ir para o menu Tools (Ferramentas) e então descer para  "Install Packages" (Instalar Pacotes) e isso abrirá uma pasta que lhe permitirá escolher o repositório e o pacote que você quer instalar e o programa instalará o pacote para você. 
+
+Instalar pacotes do Bioconductor é um pouco diferente Você não usa "install.packages" mas ainda assim é bem direto O que você deve fazer é digitar esse comando "source" e este website aqui, e isto carregará a função "biocLite" Primeiro, digite apenas o nome "biocLite"  e o que isso fará é que instalará a versão básica do Bioconductor Realmente são diversos pacotes, então se prepare para instalar muitos pacotes na primeira vez que executar a função Então, da próxima vez que você quiser instalar um pacote específico você novamente faria como no caso do install.packages digitando biocLite e "c", parênteses e então cada nome de pacote entre aspas, separados por vírgula Então é dessa maneira que se instala pacotes 
+
+Você também pode carregar os pacotes depois de tê-los instalado Se você os instalou, não quer dizer que todas as funções estarão imediatamente disponíveis para você Você precisar usar o comando "library" (biblioteca) para dizer ao R quais pacotes carregar Por exemplo, se você instalou o pacote ggplot2 e quiser usar as funções do ggplot2 você precisa digitar o comando "library(ggplot2)"  para ter acesso às funções daquele pacote. Todos os pacotes que precisam ser carregados, serão carregados primeiro. Por exemplo, se você não tiver alguma dependência, então você não será capaz de carregar o pacote Uma nota importante aqui é que você não deve colocar o nome dos pacotes entre aspas quando estiver usando library(), senão você não carregará o pacote corretamente. Alguns pacotes produzem mensagens quando estão sendo instalados e outros não De qualquer maneira, você não precisa se preocupar com isso 
+
+Depois de carregar o pacote, as funções exportadas por aquele pacote serão ligadas ao topo da lista de procura. Então, o que você pode fazer é digitar "library(ggplot2)" e então, se você digitar "search", abrir e fechar parênteses, você verá todas as funções que são parte do pacote ggplot2 Em resumo, pacotes R são um mecanismo poderoso para extensão de funcionalidade do R Pacotes R podem ser obtidos pelo CRAN ou outros repositórios A função install.packages pode ser usada para instalar pacotes do console do R e a função library é o que você faz para carregar os pacotes e definitivamente ter acesso às funções. 
+
+
+%%%%%%%%%%
+\subsection{Installing Rtools}
+
+Esta aula é sobre a instalação do Rtools. Esta aula é primeiramente útil para pessoas que usam Windows. Pessoas que usam Mac ou Linux não precisam desta aula. 
+
+Rtools é uma coleção de ferramentas necessárias para construir pacotes R no Windows. Não vamos fazer isto agora mas faremos depois no curso de desenvolvimento de produtos de dados então você deve ser capaz de instalar o Rtools se você for completar esse outro curso. Rtools está disponível para download neste website aqui, como havia dito. Então, o que você pode fazer é encontrar a versão do Rtools que esteja disponível e que seja a última versão, Você deve selecionar o link para download do .exe, correspondente à sua versão do R, então você deve encontrar qual versão do R você tem. E então, baixar a versão. Se você não está certo sobre qual versão do R você tem, abra e reinicie o R e aí você verá  que bem no começo há um texto exibido e uma das coisas listadas neste texto é a versão do R. 
+
+Se você tem a versão mais recente do R você deve selecionar o download mais recente do Rtools, que está no topo do quadro. E, se você já instalou o R apenas para este curso, então você precisará da versão mais recente do Rtools 
+
+Uma vez baixado, você abrirá o arquivo executável para iniciar a instalação. 
+
+Basicamente, a não ser que você saiba o que está fazendo, você deve simplesmente seguir com a seleção padrão a cada passo da instalação. Há somente dois passos que valem a pena prestar atenção. Se você já possui o Cygwin instalado na sua máquina apenas siga as instruções a seguir durante a instalação, e estas instruções estão também nesta URL. 
+
+E você deve ter certeza que esta caixa está marcada para que o instalador edite o caminho/path. Daí você pode ver aqui embaixo, se você tiver uma super visão de águia, claro. Basicamente tenha certeza que a caixinha está marcada para que o instalador edite o caminho/path. 
+
+Uma vez instalado o Rtools, você pode abrir o RStudio e instalar o pacote devtools se ainda não tiver feito isso. Se você digitar "find.packages("devtools")" no console você perceberá se o tem ou não. Aí para instalá-lo, você pode simplesmente fazer como em aulas anteriores apenas use install.packages("devtools") desse jeito, e você terá o pacote devtools. 
+
+Concluída a instalação do devtools você pode carregá-lo usando library(devtools) e digitar find\_rtools(), como mostrado abaixo, e isto deverá retornar TRUE. Então você deve ver TRUE imprimido na tela se a instalação do Rtools trabalhou corretamente e você estará pronto para começar. 
+
+
+%%%%%%%%%%
+\section{Semana 3}
+
+
+%%%%%%%%%%
+\subsection{Types of Questions}
+
+Esta aula é sobre os Tipos de Questões em Ciência dos Dados. Na semana passada nós cobrimos muito sobre a instalação e configuração do software e nesta semana vamos falar um pouco mais sobre as ideias conceituais por trás da ciência dos dados. 
+
+Então, há alguns tipos diferentes de questões de ciência dos dados que eu listei aqui segundo a sua ordem aproximada de dificuldade de realmente atingir o objetivo daquela análise. Começamos com questões descritivas, depois vamos para exploratórias, inferenciais, preditivas, causais e mecanísticas. E eu vou falar sobre cada uma destes tipos de análises nos próximos slides. O primeiro é a análise descritiva. O objetivo aqui é apenas descrever um conjunto de dados. Você não vai tentar fazer qualquer tipo de decisão baseada na análise ou qualquer coisa parecida. É o primeiro tipo de análise de dados que é feito. E é mais comumente aplicado quando você está falando de dados do censo. 
+
+A descrição e interpretação destes dados são passos diferentes, você primeiro descreve os dados e então interpreta o que viu. 
+
+Descrições normalmente não podem ser generalizadas sem uma modelagem estatística adicional. Em outras palavras, você está descrevendo o que você está vendo nestes dados, mas você não está dizendo como serão os dados para a próxima pessoa que aparecer. 
+
+Um exemplo de análise descritiva é este censo dos EUA. Esta é uma imagem do censo de 2010 um site que coletou uma série de informações sobre as pessoas nos Estados Unidos e eles não está necessariamente analisando-os para fazer algum tipo de predição. Agora algumas pessoas ou outros países eles estão apenas tentando descrever a população. Outro exemplo de análise descritiva é o Google Ngram Viewer. Esta é uma coleção de informações sobre pares ou triplas de palavras. Por exemplo, este é um gráfico sobre o número de observação das palavras Albert Einstein, Sherlock Holmes e Frankenstein sobre o tempo em livros que foram escaneados pelo Google. Novamente, eles não estão tentando inferir nada nem tomar decisões. Você poderia fazer isso mas isso é apenas uma descrição do que está acontecendo. 
+
+O próximo tipo é a análise exploratória. Aqui você está tentando olhar para alguns dados e encontrar relacionamentos que você não tinha ideia anteriormente mas não necessariamente confirmá-los. Ela é boa para descobrir novas conexões e também para definir futuros projetos de ciência dos dados, onde você está tentando confirmar a exploração que você realizou. Elas normalmente não são a palavra final em nenhum problema particular e normalmente não devem ser usadas para generalizar ou predizer. 
+
+O ponto importante é que você provavelmente ouviu antes que correlação não implica causalidade. Portanto, você não quer necessariamente dizer que você descobriu uma relação que é a relação crítica entre duas variáveis baseado apenas em uma análise exploratória. 
+
+Aqui está um exemplo  de uma análise exploratória, onde estamos olhando imagens cerebrais e tentando identificar regiões do cérebro que se acendem em resposta a um estímulo em particular. Eles exploraram estes dados e observaram que aqui há uma região que se ilumina em resposta àquele estímulo. E aqui há outra região que se ilumina em resposta ao estímulo. Eles não confirmaram necessariamente o que isto significa mas apenas que eles descobriram uma nova conexão que eles não tinham visto antes de ter estes dados. 
+
+Um outro exemplo que está realmente hospedado aqui na Johns Hopkins é a pesquisa Sloan Digital Sky Possui simplesmente terabytes ou mais de dados que foram coletados olhando o céu à noite. Na realidade são fotos do céu noturno em diferentes horários e de diferentes lugares que você pode explorar para tentar descobrir novas estrelas ou como diferentes coisas no universo trabalham em conjunto. Esses dados são usados para exploração mas não necessariamente para confirmar alguma coisa que você descobrir. 
+
+A análise inferencial é um objetivo de onde você está realmente tentando pegar um poucos de dados em um número pequeno de observações e extrapolar ou generalizar esta informação para uma população maior. Inferência é definitivamente o objetivo mais comum da maioria dos modelos estatísticos, e de estatística em geral que você já ouviu falar. Envolve tanto estimar alguma quantidade que você se interessa, como também, talvez mais importante, a incerteza da quantidade que você tem interesse. E isso depende fortemente tanto da população observada, do grupo de pessoas  ou do grupo de objetos que você se interessa e o processo de amostragem Este é um exemplo de análise inferencial. A ideia aqui é que você está tentando ver o efeito do controle de poluição do ar na expectativa de vida nos Estados Unidos. O que eles fizeram foi, eles não analisaram todos os países dos Estados Unidos mas analisaram um subconjunto dos países dos Estados Unidos e usaram isso para tentar inferir algo para o que normalmente está ocorrendo no relacionamento entre poluição do ar e expectativa de vida 
+
+Análise preditiva é um pouco diferente A análise inferencial normalmente é um pouco mais desafiadora A ideia é usar os dados de alguns objetos para predizer os valores em outros objetos para a próxima observação que aparecer. 
+
+Uma coisa importante para se ter em mente é que, mesmo que x prediga y, não significa que x causa y Esta é uma das principais falácias que você pode encontrar quando estiver lidando com análise preditiva. 
+
+Predições acuradas dependem fortemente em medir as variáveis corretas. 
+
+E, embora hajam melhores e piores modelos preditivos, é bem claro que mais dados e modelos simples tendem a funcionar muito bem. Predição é bem difícil, especialmente sobre o futuro, então aqui temos uma citação engraçada que na verdade é bem eficaz, e eu listei algumas referências aqui onde você pode ver outras pessoas que disseram a mesma coisa. 
+
+Aqui está um exemplo de análise preditiva. Nate Silver é um dos cientistas de dados que eu mencionei anteriormente e FiveThirtyEight é seu blog onde ele tenta predizer o resultado das eleições americanas. O que ele faz é pegar dados de pesquisas e tentar predizer o que acontecerá nas próximas eleições presidenciais. ele foi bem preciso nisso nas eleições de 2008 e 2012. Aqui está outro exemplo, na verdade  um mal exemplo se você fosse a adolescente em questão. A empresa Target descobriu que uma adolescente  estava grávida antes do seu pai olhando para as compras que ela fez e mandando-lhe um folheto dizendo-lhe que estava grávida. é claro que o pai da garota ficou um pouco chateado porque ele não sabia que ela estava grávida mas foi um exemplo de como você poderia usar dados para predizer características de pessoas, incluindo metadados. 
+
+Análise causal é um nível acima É realmente mais difícil identificar relacionamentos causais em dados A ideia é, o que acontece se você mudar o valor de uma das variáveis? Como isso afetará o valor de outra variável? O padrão-ouro para se fazer isso em geral é usar estudos randomizados ou estudos randomizados controlados para se identificar causalidade. Você pode tentar fazer isso a partir de dados observados que você salvou na base de dados, o que fica bem mais difícil. Você deve fazer suposições muito mais fortes sobre a maneira que seu modelo funciona. 
+
+Relacionamentos causais são normalmente identificados como efeitos de média em outras palavras, na média. Se nós dermos à essa população uma droga em particular, então, na média, eles viverão pouco mais caso não tivessem tomado a droga. Estes então são os padrão-ouro para análise de dados. Especificamente, para a maioria das aplicações científicas, o objetivo é chegar a um relacionamento causal entre as variáveis Aqui está um exemplo de análise causal. Basicamente, o que eles fizeram foi realizar transplantes fecais. É um processo bem nojento de realizar entre diferentes pessoas para que diferentes bactérias se reproduzam em seus cólons lhes permitindo se recuperar da infecção de uma bactéria em particular. Eles foram capazes de randomizar as pessoas para receber os tratamentos fecais e determinaram que determinado tratamento estava sempre associado com melhores resultados 
+
+Análise mecanicista é raramente tocada em ciência dos dados mas é importante de se ter em mente para que tenhamos conhecimento de todos os tipos de análise que podem ser feitas mas ela raramente é o objetivo das análises. A ideia é entender a exata mudança de variáveis que levam a exatas mudanças em outras variáveis Isto é muito difícil de se inferir, ainda mais com ruído nos dados. A exceção fica nas mais simples situações ou em situações que são muito bem modeladas por um conjunto determinístico de equações. As aplicações mais comuns onde isto é possível são nas ciências físicas ou de engenharia onde alguns modelos mais simplificados podem descrever muito da ação que está acontecendo. 
+
+Normalmente, o único componente aleatório existente quando você está fazendo análise mecanicista são os erros de medida ao contrário de todos os outros tipos de variações que você pode ver nos dados. Aqui está um exemplo de análise mecanicista onde a ideia era descobrir quais eram as diferenças e mudanças que se faria no design de calçadas o que levaria a mudanças no funcionamento daquela calçada. Como eu disse, análises mecanicistas tendem a ficar em aplicações físicas ou de engenharia. Este foi um rápido tour pelo tipos de questões que nós abordamos em ciência dos dados.
+
+
+%%%%%%%%%%
+\subsection{What is Data?}
+
+
+%%%%%%%%%%
+\subsection{What About Big Data?}
+
+
+%%%%%%%%%%
+\subsection{Experimental Design}
+
