@@ -1,27 +1,11 @@
 \textsf{Coursera} - Ferramentas do Cientista de Dados
 Aluno: Filipe Ronald Noal\\\texttt{filipe.ronald@gmail.com}
 
-
-% \def\wp         {\textsf{WhatsApp}}%
-% \def\fb         {\textsf{Facebook}}%
-% \def\email      {\textit{e-mail}}%
-% \def\mililitro  {\,{\rm m}\ell}%
-% \def\litro      {\,\ell}%
-% \def\metro      {\,{\rm m}}%
-% \def\centimetro {\,{\rm cm}}%
-% \def\miligrama  {\,{\rm mg}}%
-% \def\grama      {\,{\rm g}}%
-% \def\kilograma  {\,{\rm kg}}%
 \def\r          {`\textsf{R}'}%
-% \newcommand{\hora}[2]{{#1}h\,{#2}min}%
-% \newcommand{\dinheiro}[2]{R\$*\,{#1}{,}{#2}}%
-% \newcommand{\remed}[3]{{#1} {$#2$} {(\textsl{#3})}}%
-% \newenvironment{nitemize}{\begin{itemize}}{\end{itemize}}%
-% \newenvironment{nenumerate}{\begin{enumerate}}{\end{enumerate}}%
 
 
 %%%%%%%%%%
-\section{Semana 1}
+\section{Semana I}
 
 %%%%%%%%%%
 \subsection{Welcome to the Data Scientist's Toolbox}
@@ -621,7 +605,7 @@ Uma das coisas que frequentemente pedimos para fazer neste curso é instalar sof
 
 
 %%%%%%%%%%
-\section{Semana 2}
+\section{Semana II}
 
 %%%%%%%%%%
 \subsection{Tips from Coursera Users - Optional Video}
@@ -926,7 +910,7 @@ Concluída a instalação do devtools você pode carregá-lo usando library(devt
 
 
 %%%%%%%%%%
-\section{Semana 3}
+\section{Semana III}
 
 
 %%%%%%%%%%
@@ -972,7 +956,101 @@ Normalmente, o único componente aleatório existente quando você está fazendo
 
 
 %%%%%%%%%%
+\subsection*{Questões em Ciência de Dados - Resumo Esquemático}
+
+\begin{multicols}{2}
+\begin{nitemize}
+\item Análise Descritiva:
+  \begin{nitemize}
+  \item Primeiro tipo de análise realizada.
+  \item Descrição de dados.
+  \item Decisões \emph{não são tomadas} a partir dela.
+  \item Descrição $\to$ interpretação.
+  \end{nitemize}
+  
+\item Análise Exploratória:
+  \begin{nitemize}
+  \item Encontrar relacionamentos desconhecidos.
+  \item Novas conexões.
+  \item Definir estudos futuros.
+  \item \emph{Não dá} a palavra final.
+  \item Não se presta a predições ou generalizações.
+  \item Correlação $\neq$ causalidade.
+  \end{nitemize}
+  
+\item Análise Inferencial:
+  \begin{nitemize}
+  \item Amostra pequena descreve uma grande população.
+  \item Normalmente é o objetivo dos modelos estatísticos.
+  \item Estimativa da grandeza analisada e a incerteza desta estimativa.
+  \item Depende muito da população e da amostra.
+  \end{nitemize}
+  
+\item Análise Preditiva:
+  \begin{nitemize}
+  \item Usa dados em alguns objetos para predizer valores de outros objetos.
+  \item $x \mbox{ prever }y \neg\Rightarrow x \mbox{ causar }y$.
+  \item Previsões precisas dependem da medida das grandezas corretas.
+  \item Existem modelos melhores e modelos piores.
+  \item Fato: mais dados são eficientes mesmo com \emph{modelos simples}.
+  \item Previsões são muito difíceis!
+  \end{nitemize}
+  
+\item Análise Causal:
+  \begin{nitemize}
+  \item Descobrir o que ocorre com $x$ quando $y$ é alterado.
+  \item Normalmente, requer estudos randômicos para identificar causalidade.
+  \item Existem métodos de evitar estudos randômicos, mas são mais complexos.
+  \item Relacionamento causal é verificado como efeito de grupo (resultado médio) e não como do indivíduo.
+  \item São ``\textit{gold standard}'' na análise de dados.
+  \end{nitemize}
+  
+\item Análise Mecanicista:
+  \begin{nitemize}
+  \item Compreender as mudanças exatas nas variáveis que conduzem as mudanças em outras para objetos individuais.
+  \item Muito difícil.
+  \item Normalmente modelado por um conjunto de equações determinísticas (como na Física).
+  \item O componente aleatório dos dados é um erro mensurável.
+  \item Parâmetros desconhecidos de \emph{equações conhecidas} podem ser inferidos por análise de dados.
+  \end{nitemize}
+\end{nitemize}
+\end{multicols}
+
+
+%%%%%%%%%%
 \subsection{What is Data?}
+
+Como estamos em uma especialização de ciência dos dados, pode ser uma boa ideia entender o que são dados. Para definirmos o que são dados, vamos recorrer à ``fonte número um'' de toda informação: Wikipedia. Vamos tomar a definição de que dados são ``(\ldots) \emph{valores, de variáveis qualitativas ou quantitativas, pertencentes a um conjunto de itens} (\ldots)''. Então, a primeira coisa que pode ser vista a partir desta definição é que necessitamos de um conjunto de itens para usarmos em medições e esse conjunto de itens é algumas vezes chamado de ``população'' em inferência estatística. Basicamente, é algo sobre o qual você tenta descobrir algo; logo pode ser o conjunto de todos os websites, ou pode ser o conjunto de todas as pessoas acessando websites, ou pode ser o conjunto de todas as pessoas adquirindo um certo fármaco. Em geral, porém, é um conjunto de coisas no qual você fará medidas.
+
+Variáveis são \emph{medidas ou características} de um item. Então, podem ser medidas como, por exemplo, a medida da altura de uma pessoa, ou a medida do tempo que uma pessoa permanece em um website, ou podem ser características mais qualitativas. Os locais que a pessoa olha no website, ou sobre você acreditar que a pessoa visitante é um homem ou uma mulher.
+
+Dessa forma, existem variáveis \emph{qualitativas} e \emph{quantitativas}. Variáveis qualitativas se referem a coisas como país de origem, sexo ou tratamento. Elas não são necessariamente ordenadas, e não são necessariamente medidas de tal maneira. Medidas quantitativas, por outro lado, são geralmente medidas em uma escala contínua. São coisas como altura, peso e pressão sanguínea. Geralmente, elas têm uma ordem nessa escala.
+
+Então, como são os dados? Você pode pensar que, quando me refiro a dados, me refiro a algo como uma grande tabela no MS Excel, ou algo do gênero, mas, na verdade, a maior parte dos dados começa de uma forma muito crua. Este é um exemplo de um arquivo de sequenciamento, que é um tipo de arquivo produzido por uma máquina de sequenciamento de nova geração. Um experimento típico produzirá centenas de milhões de linhas de um arquivo de texto com essa aparência. Então, você pode realmente ver neste arquivo uma sequência, de uma leitura particular, proveniente do genoma de uma pessoa. O que você quer ser capaz de fazer é analisar esse arquivo, e coletar esses dados, possivelmente inferindo algo sobre esse genoma. 
+
+Outra forma de apresentação dos dados é como uma API - \textit{Application Programming Interface}. Essa é uma imagem do website da API do Twitter. O que você pode fazer é tentar obter uma URL particular. Você pode então tentar acessar essa URL e obter informação a partir dela. E o que você obteria seria algo como isso, uma forma estruturada de dados,  que não é necessariamente algo que você veria em um arquivo de Excel, mas é uma forma estruturada de dados que você pode obter. 
+
+Aqui temos um exemplo de um histórico médico. Mais uma vez, esse é outro tipo de dados. As pessoas têm muito interesse no estudo de históricos médicos, e tentar entender como as pessoas podem melhorar a forma de garantia às pessoas, ou melhorar a forma de oferecer serviço médico às pessoas. Assim, esses dados são arquivos de textos que não estão necessariamente bem formatados. Você pode querer fazer coisas como extrair o nome de uma alergia desse arquivo de texto. Ou subtrair ou extrair quê diferentes coisas foram prescritas, entre outras coisas, e depois usar esses dados talvez para responder algumas perguntas.
+
+Os dados também podem estar em um vídeo. Nesse caso específico, especialistas em aprendizado de máquina desenvolveram um algoritmo que podia entender se um vídeo era um gato ou se era alguma outra coisa. Parece uma aplicação trivial, mas é um problema difícil, que eles conseguiram resolver. Nesse caso particular, porém, os dados eram os próprios vídeos. São imagens do próprio vídeo. Um dado também pode ser um arquivo de áudio. Este é um exemplo, DarwinTunes, no qual as pessoas realmente estudam a evolução da música no tempo, onde as pessoas decidiram se as inovações introduzidas nos arquivos de áudio eram interessantes ou não. Então, ao longo do tempo, eles evoluíram para uma música que era mais melodiosa e mais interessante para as pessoas escutarem. Então, os dados nesse caso eram os arquivos de áudio estudados.
+
+Os dados também podem ter forma de acesso a arquivos, seja por um API ou por planilhas por sites abertos do governo. Então, por exemplo, o data.gov tem muitos conjuntos de dados que podem ser acessíveis, e esses sites de dados podem se apresentar de diferentes formas, desde os muito simples até os arquivos separados por espaço ou vírgula, aos arquivos de MS Excel, ou algo muito mais complicado e desorganizado como arquivos de texto RAW. 
+
+Raramente os dados se parecem exatamente com o que você espera ver no início de um projeto de ciência de dados. Então, aqui está um conjunto de dados bem claro e simples onde você tem variáveis em colunas, e observações em linhas. E parece ser muito simples de analisar. É muito raro que os dados venham assim tão facilmente processados no início de um estudo. 
+
+Portanto, \emph{os dados são na verdade a segunda coisa mais importante} em ciência dos dados. A coisa \emph{mais importante em ciência dos dados é na verdade a questão que você está tentando responder}. E os dados devem seguir aquela questão. Eles são a segunda coisa mais importante, após a questão. Frequentemente, os dados vão limitar ou possibilitar as questões que você está tentando responder. Em outras palavras, você começa com a questão, e talvez você não tenha dados para responder a questão. Então, você deverá modificá-la para poder respondê-la como se fosse uma subquestão ou uma questão relacionada. 
+
+Mas, apenas ter os dados não o salvarão se você não sabe qual é a questão que está tentando responder. E esta é a mensagem mais importante para levar para casa.
+
+\begin{center}
+\begin{tabular}{p{15cm}}
+\hline
+{\large\textbf{``}}
+Talvez o tema deste curso de ferramentas do cientista de dados seja focar em ter uma questão a ser respondida com os seus dados e não ser levado pelo simples fato de ter dados disponíveis.
+{\large\textbf{''}}\\
+\hline
+\end{tabular}
+\end{center}
 
 
 %%%%%%%%%%
