@@ -914,45 +914,51 @@ Concluída a instalação do devtools você pode carregá-lo usando library(devt
 
 
 %%%%%%%%%%
-\subsection{Types of Questions}
+\subsection{Tipos de questões}
 
-Esta aula é sobre os Tipos de Questões em Ciência dos Dados. Na semana passada nós cobrimos muito sobre a instalação e configuração do software e nesta semana vamos falar um pouco mais sobre as ideias conceituais por trás da ciência dos dados. 
+\begin{multicols}{2}
+\begin{footnotesize}
+Esta aula é sobre os Tipos de Questões em Ciência dos Dados. Na semana passada, nós cobrimos muito sobre a instalação e configuração do software e nesta semana vamos falar um pouco mais sobre as ideias conceituais por trás da ciência dos dados. 
 
-Então, há alguns tipos diferentes de questões de ciência dos dados que eu listei aqui segundo a sua ordem aproximada de dificuldade de realmente atingir o objetivo daquela análise. Começamos com questões descritivas, depois vamos para exploratórias, inferenciais, preditivas, causais e mecanísticas. E eu vou falar sobre cada uma destes tipos de análises nos próximos slides. O primeiro é a análise descritiva. O objetivo aqui é apenas descrever um conjunto de dados. Você não vai tentar fazer qualquer tipo de decisão baseada na análise ou qualquer coisa parecida. É o primeiro tipo de análise de dados que é feito. E é mais comumente aplicado quando você está falando de dados do censo. 
+Então, há alguns tipos diferentes de questões de ciência dos dados que eu listei aqui segundo a sua ordem aproximada de dificuldade de realmente atingir o objetivo daquela análise. Começamos com questões \emph{descritivas}, depois vamos para \emph{exploratórias}, \emph{inferenciais}, \emph{preditivas}, \emph{causais} e \emph{mecanísticas}. E eu vou falar sobre cada uma destes tipos de análises nos próximos slides.
 
-A descrição e interpretação destes dados são passos diferentes, você primeiro descreve os dados e então interpreta o que viu. 
-
+O primeiro é a análise descritiva. O objetivo aqui é apenas descrever um conjunto de dados. Você não vai tentar fazer qualquer tipo de decisão baseada na análise ou qualquer coisa parecida. É o primeiro tipo de análise de dados que é feito. E é mais comumente aplicado quando você está falando de dados do censo. 
+A descrição e a interpretação destes dados são passos diferentes; você primeiro descreve os dados e então interpreta o que viu. 
 Descrições normalmente não podem ser generalizadas sem uma modelagem estatística adicional. Em outras palavras, você está descrevendo o que você está vendo nestes dados, mas você não está dizendo como serão os dados para a próxima pessoa que aparecer. 
 
-Um exemplo de análise descritiva é este censo dos EUA. Esta é uma imagem do censo de 2010 um site que coletou uma série de informações sobre as pessoas nos Estados Unidos e eles não está necessariamente analisando-os para fazer algum tipo de predição. Agora algumas pessoas ou outros países eles estão apenas tentando descrever a população. Outro exemplo de análise descritiva é o Google Ngram Viewer. Esta é uma coleção de informações sobre pares ou triplas de palavras. Por exemplo, este é um gráfico sobre o número de observação das palavras Albert Einstein, Sherlock Holmes e Frankenstein sobre o tempo em livros que foram escaneados pelo Google. Novamente, eles não estão tentando inferir nada nem tomar decisões. Você poderia fazer isso mas isso é apenas uma descrição do que está acontecendo. 
+Um exemplo de análise descritiva é este censo dos EUA. Esta é uma imagem do censo de 2010. Um site que coletou uma série de informações sobre as pessoas nos Estados Unidos e ele não está necessariamente analisando-os para fazer algum tipo de predição. Agora, algumas pessoas ou outros países eles estão apenas tentando descrever a população. Outro exemplo de análise descritiva é o Google Ngram Viewer. Esta é uma coleção de informações sobre pares ou triplas de palavras. Por exemplo, este é um gráfico sobre o número de observação das palavras Albert Einstein, Sherlock Holmes e Frankenstein sobre o tempo em livros que foram escaneados pelo Google. Novamente, eles não estão tentando inferir nada nem tomar decisões. Você poderia fazer isso mas isso é apenas uma descrição do que está acontecendo. 
 
-O próximo tipo é a análise exploratória. Aqui você está tentando olhar para alguns dados e encontrar relacionamentos que você não tinha ideia anteriormente mas não necessariamente confirmá-los. Ela é boa para descobrir novas conexões e também para definir futuros projetos de ciência dos dados, onde você está tentando confirmar a exploração que você realizou. Elas normalmente não são a palavra final em nenhum problema particular e normalmente não devem ser usadas para generalizar ou predizer. 
+O próximo tipo é a análise exploratória. Aqui você está tentando olhar para alguns dados e encontrar relacionamentos que você não tinha ideia anteriormente mas não necessariamente confirmá-los. Ela é boa para descobrir novas conexões e também para definir futuros projetos de ciência dos dados, onde você está tentando confirmar a exploração que você realizou. Elas normalmente não são a palavra final em nenhum problema particular, assim como não devem ser usadas para generalizar ou predizer.
+O ponto importante é que você provavelmente ouviu antes que \emph{correlação não implica causalidade}. Portanto, você não quer necessariamente dizer que você descobriu uma relação que é a relação crítica entre duas variáveis baseado apenas em uma análise exploratória.
 
-O ponto importante é que você provavelmente ouviu antes que correlação não implica causalidade. Portanto, você não quer necessariamente dizer que você descobriu uma relação que é a relação crítica entre duas variáveis baseado apenas em uma análise exploratória. 
+Aqui está um exemplo de uma análise exploratória na qual olhamos imagens cerebrais e tentamos identificar regiões do cérebro que se acendem em resposta a um estímulo em particular. Eles exploraram estes dados e observaram que aqui há uma região que se ilumina em resposta àquele estímulo. E aqui há outra região que se ilumina em resposta ao estímulo. Eles não confirmaram necessariamente o que isto significa mas apenas que eles descobriram uma nova conexão que eles não tinham visto antes de ter estes dados.
 
-Aqui está um exemplo  de uma análise exploratória, onde estamos olhando imagens cerebrais e tentando identificar regiões do cérebro que se acendem em resposta a um estímulo em particular. Eles exploraram estes dados e observaram que aqui há uma região que se ilumina em resposta àquele estímulo. E aqui há outra região que se ilumina em resposta ao estímulo. Eles não confirmaram necessariamente o que isto significa mas apenas que eles descobriram uma nova conexão que eles não tinham visto antes de ter estes dados. 
+Um outro exemplo que está hospedado aqui na Johns Hopkins é a pesquisa Sloan Digital Sky. Possui terabytes ou mais dados que foram coletados olhando o céu à noite. Na realidade, são fotos do céu noturno em diferentes horários e de diferentes lugares que você pode explorar para tentar descobrir novas estrelas ou como diferentes coisas no universo trabalham em conjunto. Esses dados são usados para exploração mas não necessariamente para confirmar alguma coisa que você descobrir.
 
-Um outro exemplo que está realmente hospedado aqui na Johns Hopkins é a pesquisa Sloan Digital Sky Possui simplesmente terabytes ou mais de dados que foram coletados olhando o céu à noite. Na realidade são fotos do céu noturno em diferentes horários e de diferentes lugares que você pode explorar para tentar descobrir novas estrelas ou como diferentes coisas no universo trabalham em conjunto. Esses dados são usados para exploração mas não necessariamente para confirmar alguma coisa que você descobrir. 
+A análise inferencial é um objetivo de onde você está realmente tentando pegar um pouco de dados em um número pequeno de observações e extrapolar ou generalizar esta informação para uma população maior. Inferência é definitivamente o objetivo mais comum da maioria dos modelos estatísticos e de estatística em geral. Envolve tanto estimar alguma quantidade que você se interessa, como também, talvez mais importante, a incerteza da quantidade que você tem interesse. E isso depende fortemente tanto da população observada, do grupo de pessoas  ou do grupo de objetos que você se interessa e o processo de amostragem.
 
-A análise inferencial é um objetivo de onde você está realmente tentando pegar um poucos de dados em um número pequeno de observações e extrapolar ou generalizar esta informação para uma população maior. Inferência é definitivamente o objetivo mais comum da maioria dos modelos estatísticos, e de estatística em geral que você já ouviu falar. Envolve tanto estimar alguma quantidade que você se interessa, como também, talvez mais importante, a incerteza da quantidade que você tem interesse. E isso depende fortemente tanto da população observada, do grupo de pessoas  ou do grupo de objetos que você se interessa e o processo de amostragem Este é um exemplo de análise inferencial. A ideia aqui é que você está tentando ver o efeito do controle de poluição do ar na expectativa de vida nos Estados Unidos. O que eles fizeram foi, eles não analisaram todos os países dos Estados Unidos mas analisaram um subconjunto dos países dos Estados Unidos e usaram isso para tentar inferir algo para o que normalmente está ocorrendo no relacionamento entre poluição do ar e expectativa de vida 
+Este é um exemplo de análise inferencial. A ideia aqui é que você está tentando ver o efeito do controle de poluição do ar na expectativa de vida nos Estados Unidos. Eles não analisaram todos as Unidades Federativas dos Estados Unidos mas apenas um subconjunto delas e usaram isso para tentar inferir algo que está ocorrendo no relacionamento entre poluição do ar e expectativa de vida 
 
-Análise preditiva é um pouco diferente A análise inferencial normalmente é um pouco mais desafiadora A ideia é usar os dados de alguns objetos para predizer os valores em outros objetos para a próxima observação que aparecer. 
+Análise preditiva é um pouco diferente e um pouco mais desafiadora. A ideia é usar os dados de alguns objetos para predizer os valores em outros objetos para a próxima observação que aparecer.
+Uma coisa importante para se ter em mente é que, mesmo que $x$ prediga $y$, não significa que $x$ causa $y$. Esta é uma das principais falácias que você pode encontrar quando estiver lidando com análise preditiva.
+\emph{Predições acuradas dependem fortemente em medir as variáveis corretas.}
+E, embora hajam melhores e piores modelos preditivos, está claro que \emph{mais dados} aplicados mesmo em \emph{modelos simples} tendem a funcionar muito bem. Predição é bem difícil, especialmente sobre o futuro. Então, aqui temos uma citação engraçada que na verdade é bem eficaz, e eu listei algumas referências aqui onde você pode ver outras pessoas que disseram a mesma coisa. 
 
-Uma coisa importante para se ter em mente é que, mesmo que x prediga y, não significa que x causa y Esta é uma das principais falácias que você pode encontrar quando estiver lidando com análise preditiva. 
+Aqui está um exemplo de análise preditiva. Nate Silver é um dos cientistas de dados que eu mencionei anteriormente, e FiveThirtyEight é seu blog onde ele tenta predizer o resultado das eleições americanas. O que ele faz é pegar dados de pesquisas e tentar predizer o que acontecerá nas próximas eleições presidenciais --- e ele foi bem preciso nisso nas eleições de 2008 e 2012. Aqui está outro exemplo --- na verdade, um mal exemplo se você fosse a adolescente em questão. A empresa Target descobriu que uma adolescente estava grávida antes do seu pai olhando apenas para as compras que ela fez e mandando-lhe um folheto dizendo-lhe que estava grávida. É claro que o pai da garota ficou um pouco chateado porque ele não tinha conhecimento do fato. Eis um exemplo de como você poderia usar dados para predizer características de pessoas, incluindo metadados. 
 
-Predições acuradas dependem fortemente em medir as variáveis corretas. 
+Análise causal é um nível acima, pois realmente é mais difícil identificar relacionamentos causais em dados. A ideia é: o que acontece se você mudar o valor de uma das variáveis? Como isso afetará o valor de outra variável? O ``padrão-ouro'' para se fazer isso em geral é usar estudos randomizados ou estudos randomizados controlados para se identificar causalidade. Você pode também tentar fazer isso a partir de dados observados que você salvou na base de dados, o que fica bem mais difícil. Você deve fazer suposições muito mais fortes sobre a maneira que seu modelo funciona. 
+Relacionamentos causais são normalmente identificados como efeitos de média. Se nós dermos a essa população uma droga em particular, então, na média, eles viverão pouco mais caso não tivessem tomado a droga. Estes então são os padrão-ouro para análise de dados. Especificamente, para a maioria das aplicações científicas, o objetivo é chegar a um relacionamento causal entre as variáveis.
 
-E, embora hajam melhores e piores modelos preditivos, é bem claro que mais dados e modelos simples tendem a funcionar muito bem. Predição é bem difícil, especialmente sobre o futuro, então aqui temos uma citação engraçada que na verdade é bem eficaz, e eu listei algumas referências aqui onde você pode ver outras pessoas que disseram a mesma coisa. 
+Aqui está um exemplo de análise causal. Basicamente, o que eles fizeram foi realizar transplantes fecais. É um processo bem nojento de realizar entre diferentes pessoas a fim de que diferentes bactérias se reproduzam em seus cólons lhes permitindo se recuperar da infecção de uma bactéria em particular. Eles foram capazes de randomizar as pessoas para receber os tratamentos fecais e verificaram que determinado tratamento estava sempre associado com melhores resultados.
 
-Aqui está um exemplo de análise preditiva. Nate Silver é um dos cientistas de dados que eu mencionei anteriormente e FiveThirtyEight é seu blog onde ele tenta predizer o resultado das eleições americanas. O que ele faz é pegar dados de pesquisas e tentar predizer o que acontecerá nas próximas eleições presidenciais. ele foi bem preciso nisso nas eleições de 2008 e 2012. Aqui está outro exemplo, na verdade  um mal exemplo se você fosse a adolescente em questão. A empresa Target descobriu que uma adolescente  estava grávida antes do seu pai olhando para as compras que ela fez e mandando-lhe um folheto dizendo-lhe que estava grávida. é claro que o pai da garota ficou um pouco chateado porque ele não sabia que ela estava grávida mas foi um exemplo de como você poderia usar dados para predizer características de pessoas, incluindo metadados. 
+Análise mecanicista é raramente tocada em ciência dos dados mas é importante de se ter em mente para que tenhamos conhecimento de todos os tipos de análise que podem ser feitas. Convém dizer que ela raramente é o objetivo das análises. A ideia é entender a exata mudança de variáveis que levam a exatas mudanças em outras variáveis. Isto é muito difícil de se inferir, ainda mais com ruído nos dados. A exceção fica nas mais simples situações ou em situações que são muito bem modeladas por um conjunto determinístico de equações. As aplicações mais comuns onde isto é possível são nas ciências físicas ou de engenharia, onde alguns modelos mais simplificados podem descrever muito da ação que está acontecendo.
+Normalmente, o único componente aleatório existente quando você está fazendo análise mecanicista são os erros de medida, ao contrário de todos os outros tipos de variações que você pode ver nos dados.
 
-Análise causal é um nível acima É realmente mais difícil identificar relacionamentos causais em dados A ideia é, o que acontece se você mudar o valor de uma das variáveis? Como isso afetará o valor de outra variável? O padrão-ouro para se fazer isso em geral é usar estudos randomizados ou estudos randomizados controlados para se identificar causalidade. Você pode tentar fazer isso a partir de dados observados que você salvou na base de dados, o que fica bem mais difícil. Você deve fazer suposições muito mais fortes sobre a maneira que seu modelo funciona. 
+Aqui está um exemplo de análise mecanicista onde a ideia era descobrir quais eram as diferenças e mudanças que se faria no design de calçadas, levando, pois, a mudanças no funcionamento daquela calçada. Como eu disse, análises mecanicistas tendem a ficar em aplicações físicas ou de engenharia.
 
-Relacionamentos causais são normalmente identificados como efeitos de média em outras palavras, na média. Se nós dermos à essa população uma droga em particular, então, na média, eles viverão pouco mais caso não tivessem tomado a droga. Estes então são os padrão-ouro para análise de dados. Especificamente, para a maioria das aplicações científicas, o objetivo é chegar a um relacionamento causal entre as variáveis Aqui está um exemplo de análise causal. Basicamente, o que eles fizeram foi realizar transplantes fecais. É um processo bem nojento de realizar entre diferentes pessoas para que diferentes bactérias se reproduzam em seus cólons lhes permitindo se recuperar da infecção de uma bactéria em particular. Eles foram capazes de randomizar as pessoas para receber os tratamentos fecais e determinaram que determinado tratamento estava sempre associado com melhores resultados 
-
-Análise mecanicista é raramente tocada em ciência dos dados mas é importante de se ter em mente para que tenhamos conhecimento de todos os tipos de análise que podem ser feitas mas ela raramente é o objetivo das análises. A ideia é entender a exata mudança de variáveis que levam a exatas mudanças em outras variáveis Isto é muito difícil de se inferir, ainda mais com ruído nos dados. A exceção fica nas mais simples situações ou em situações que são muito bem modeladas por um conjunto determinístico de equações. As aplicações mais comuns onde isto é possível são nas ciências físicas ou de engenharia onde alguns modelos mais simplificados podem descrever muito da ação que está acontecendo. 
-
-Normalmente, o único componente aleatório existente quando você está fazendo análise mecanicista são os erros de medida ao contrário de todos os outros tipos de variações que você pode ver nos dados. Aqui está um exemplo de análise mecanicista onde a ideia era descobrir quais eram as diferenças e mudanças que se faria no design de calçadas o que levaria a mudanças no funcionamento daquela calçada. Como eu disse, análises mecanicistas tendem a ficar em aplicações físicas ou de engenharia. Este foi um rápido tour pelo tipos de questões que nós abordamos em ciência dos dados.
+Este foi um rápido tour pelo tipos de questões que nós abordamos em ciência dos dados.
+\end{footnotesize}
+\end{multicols}
 
 
 %%%%%%%%%%
@@ -1018,8 +1024,10 @@ Normalmente, o único componente aleatório existente quando você está fazendo
 
 
 %%%%%%%%%%
-\subsection{What is Data?}
+\subsection{O que são dados?}
 
+\begin{multicols}{2}
+\begin{footnotesize}
 Como estamos em uma especialização de ciência dos dados, pode ser uma boa ideia entender o que são dados. Para definirmos o que são dados, vamos recorrer à ``fonte número um'' de toda informação: Wikipedia. Vamos tomar a definição de que dados são ``(\ldots) \emph{valores, de variáveis qualitativas ou quantitativas, pertencentes a um conjunto de itens} (\ldots)''. Então, a primeira coisa que pode ser vista a partir desta definição é que necessitamos de um conjunto de itens para usarmos em medições e esse conjunto de itens é algumas vezes chamado de ``população'' em inferência estatística. Basicamente, é algo sobre o qual você tenta descobrir algo; logo pode ser o conjunto de todos os websites, ou pode ser o conjunto de todas as pessoas acessando websites, ou pode ser o conjunto de todas as pessoas adquirindo um certo fármaco. Em geral, porém, é um conjunto de coisas no qual você fará medidas.
 
 Variáveis são \emph{medidas ou características} de um item. Então, podem ser medidas como, por exemplo, a medida da altura de uma pessoa, ou a medida do tempo que uma pessoa permanece em um website, ou podem ser características mais qualitativas. Os locais que a pessoa olha no website, ou sobre você acreditar que a pessoa visitante é um homem ou uma mulher.
@@ -1041,20 +1049,52 @@ Raramente os dados se parecem exatamente com o que você espera ver no início d
 Portanto, \emph{os dados são na verdade a segunda coisa mais importante} em ciência dos dados. A coisa \emph{mais importante em ciência dos dados é na verdade a questão que você está tentando responder}. E os dados devem seguir aquela questão. Eles são a segunda coisa mais importante, após a questão. Frequentemente, os dados vão limitar ou possibilitar as questões que você está tentando responder. Em outras palavras, você começa com a questão, e talvez você não tenha dados para responder a questão. Então, você deverá modificá-la para poder respondê-la como se fosse uma subquestão ou uma questão relacionada. 
 
 Mas, apenas ter os dados não o salvarão se você não sabe qual é a questão que está tentando responder. E esta é a mensagem mais importante para levar para casa.
+\end{footnotesize}
+\end{multicols}
 
 \begin{center}
 \begin{tabular}{p{15cm}}
 \hline
-{\large\textbf{``}}
-Talvez o tema deste curso de ferramentas do cientista de dados seja focar em ter uma questão a ser respondida com os seus dados e não ser levado pelo simples fato de ter dados disponíveis.
-{\large\textbf{''}}\\
+Talvez o tema deste curso de ferramentas do cientista de dados seja focar em ter uma questão a ser respondida com os seus dados e não ser levado pelo simples fato de ter dados disponíveis. \\
 \hline
 \end{tabular}
 \end{center}
 
 
 %%%%%%%%%%
-\subsection{What About Big Data?}
+\subsection{E sobre o Big Data?}
+
+\begin{multicols}{2}
+\begin{footnotesize}
+Uma questão que geralmente surge quando se fala em ciência de dados é, ``e quanto ao Big Data?''. Obviamente, Big Data é diferente para cada pessoa. Big Data para alguém sem um computador podem ser 1.000 números, mas Big Data para alguém com acesso ao Amazon EC2 pode ser enorme, muito, muito maior. Então, qual é essa quantidade de dados? Este infográfico diz que em 2011 haverá 1.8 zetabytes criados, o que é uma quantidade gigantesca de dados. Mas, na verdade, somente uma fração muito pequena destes dados pode ser usada para responder a qualquer pergunta específica que você possa ter em mente. 
+
+Então, a pergunta continua: e quanto ao Big Data? Você frequentemente pensa e vê coisas como Big Data e gerenciamento da nuvem, e estas duas coisas tendem a andar juntas e isto acontece porque alguns conjuntos de dados são tão grandes que você não pode analisá-los no seu notebook. 
+Então, tudo depende da sua perspectiva.
+
+Este é um dos primeiros discos rígidos.
+Foi criado pela IBM e era capaz de armazenar uma quantidade muito menor de dados do que você pode armazenar agora no seu computador ou até mesmo no seu celular. Então, o que isto sugere é que com o tempo, conforme a tecnologia aumenta, Big Data irá mudar. Uma forma de resolver o problema de Big Data é somente esperar até que o hardware alcance o nível e tamanho dos dados. Mas a maioria das perguntas que você está tentando responder não necessariamente tem a ver com o Big Data que necessita de um número enorme de computadores, apesar de, às vezes, precisar. Então, por que Big Data se tornou algo tão importante? Bem, este é só um exemplo do por quê:
+
+Houve um experimento, conduzido por Stanley Milgram, onde ele escolheu 296 pessoas e o que ele fez foi basicamente mandar uma carta para estas pessoas e pedir para que eles mandassem uma carta para alguém que conhecessem e aí por diante até que chegassem em um determinado endereço. E então, 64 destas cadeias voltaram, 64 de 296. E a conclusão disto foi de que haviam aproximadamente 5.2 pessoas entre a pessoa que enviou a carta a princípio e a pessoa que finalmente recebeu a carta. E foi daí que veio o que se chama de ``seis graus de separação''.
+
+Então, o que acabou acontecendo é que, hoje em dia, as pessoas podem coletar muito mais dados do que eles podiam no passado e de forma mais barata. Estes investigadores escolheram uma rede de mensagem instantânea e observaram 30 bilhões de conversas entre 240 milhões de pessoas. E então conduziram um experimento parecido para tentar identificar o quão distantes as pessoas estavam, e eles buscaram analisar a mesma questão que foi vista com as 64 cadeias de envio de carta. E descobriram que o comprimento do caminho médio era de 6.6 pessoas, e atualizaram os ``seis graus de separação'' para ``sete graus de separação''. 
+
+Então, qual é a mensagem principal aqui? A mensagem é que hoje é possível coletar muito mais dados de forma muito menos custosa do que antes e analisá-los. Mas a questão é quanto destes dados é útil para responder a questão na qual você está envolvido. Isto é meio irônico. Suponha que se diga ``Não use o Hadoop; seus dados não são tão grandes assim''. O Hadoop é um destes jargões que você sempre ouve quando se trata de Big Data. Ele é uma técnica poderosa e útil se seus dados são muito, muito grandes. Mas se você tem memória suficiente no seu computador, ou tem um computador potente o suficiente, você pode analisar um grande número de conjuntos de dados que são importantes e relevantes para você sem ter que buscar técnicas mais complicadas que são motivadas pelo aumento no tamanho dos dados até conjuntos de dados massivos, como os dados analisados pelo Google e Facebook. 
+\end{footnotesize}
+\end{multicols}
+
+\begin{center}
+\begin{tabular}{p{15cm}}
+\hline
+Seja Big ou Small data, o que você precisa, independentemente da dimensão dos dados, é dos dados certos. Os dados podem não conter a resposta. A combinação de dados e o forte desejo de encontrar uma resposta não garantem que uma resposta possa ser extraída de um conjunto de dados. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{multicols}{2}
+\begin{footnotesize}
+Esta é uma frase de John Toupee, um dos primeiros cientistas dedicados a análise de dados. Eu ainda acrescentaria que, não importa quão grande são os dados. Mesmo que haja um conjunto gigantesco de dados, isso pode não ser suficiente para responder à sua pergunta se não forem os dados certos. 
+\end{footnotesize}
+\end{multicols}
 
 
 %%%%%%%%%%
