@@ -1,0 +1,3 @@
+# Material a ser ignorado pelo git.
+.directory
+
